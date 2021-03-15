@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './views/template/footer/footer.component';
 import { HeaderComponent } from './views/template/header/header.component';
+import { IndexContentComponent } from './views/index-content/index-content.component';
+import { DonateComponent } from './views/donate/donate.component';
+import { ContactComponent } from './views/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -30,17 +34,29 @@ import { HeaderComponent } from './views/template/header/header.component';
     RegistrationPromoterComponent,
     FooterComponent,
     HeaderComponent,
+    IndexContentComponent,
+    DonateComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+
+
+
+
 
 
 

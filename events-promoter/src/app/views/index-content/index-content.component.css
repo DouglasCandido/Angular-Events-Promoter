@@ -1,0 +1,33 @@
+.about {
+    text-align: center;
+    background-color: blueviolet;
+}
+
+.about .about-title {
+    font-size: 50px;
+    font-weight: bolder;
+    color: black;
+    box-shadow: 10px 5px 5px black;
+    background-color: aqua;
+}
+
+.about .about-subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.about .about-content {
+    font-size: 25px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.about .about-image {
+    width: 50%;
+    height: 50%;
+}
+
+
+

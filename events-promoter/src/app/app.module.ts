@@ -17,7 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './views/template/footer/footer.component';
 import { HeaderComponent } from './views/template/header/header.component';
 import { IndexContentComponent } from './views/index-content/index-content.component';
-import { DonateComponent } from './views/donate/donate.component';
+import { DonationComponent } from './views/donation/donation.component';
 import { ContactComponent } from './views/contact/contact.component';
 
 @NgModule({
@@ -35,7 +35,7 @@ import { ContactComponent } from './views/contact/contact.component';
     FooterComponent,
     HeaderComponent,
     IndexContentComponent,
-    DonateComponent,
+    DonationComponent,
     ContactComponent,
   ],
   imports: [

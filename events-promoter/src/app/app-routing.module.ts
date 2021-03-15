@@ -1,5 +1,5 @@
+import { DonationComponent } from './views/donation/donation.component';
 import { ContactComponent } from './views/contact/contact.component';
-import { DonateComponent } from './views/donate/donate.component';
 import { LoginComponent } from './views/login/login.component';
 import { IndexContentComponent } from './views/index-content/index-content.component';
 import { RegistrationComponent } from './views/registration/registration.component';
@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: "", component: IndexContentComponent },
   { path: "registration", component: RegistrationComponent },
   { path: "login", component: LoginComponent },
-  { path: "donate", component: DonateComponent },
+  { path: "donation", component: DonationComponent },
   { path: "contact", component: ContactComponent },
 ];
 

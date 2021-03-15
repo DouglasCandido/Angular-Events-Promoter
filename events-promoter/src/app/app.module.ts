@@ -14,6 +14,7 @@ import { RegistrationPromoterComponent } from './views/registration/registration
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './views/template/footer/footer.component';
+import { HeaderComponent } from './views/template/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FooterComponent } from './views/template/footer/footer.component';
     RegistrationEnthusiastComponent,
     RegistrationPromoterComponent,
     FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './views/index/index.component';
@@ -12,6 +11,9 @@ import { HomePromoterComponent } from './views/home-promoter/home-promoter.compo
 import { RegistrationComponent } from './views/registration/registration.component';
 import { RegistrationEnthusiastComponent } from './views/registration/registration-enthusiast/registration-enthusiast.component';
 import { RegistrationPromoterComponent } from './views/registration/registration-promoter/registration-promoter.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { FooterComponent } from './views/template/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,13 @@ import { RegistrationPromoterComponent } from './views/registration/registration
     RegistrationComponent,
     RegistrationEnthusiastComponent,
     RegistrationPromoterComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

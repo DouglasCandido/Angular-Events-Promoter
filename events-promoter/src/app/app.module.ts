@@ -19,6 +19,7 @@ import { HeaderComponent } from './views/template/header/header.component';
 import { IndexContentComponent } from './views/index-content/index-content.component';
 import { DonationComponent } from './views/donation/donation.component';
 import { ContactComponent } from './views/contact/contact.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ContactComponent } from './views/contact/contact.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

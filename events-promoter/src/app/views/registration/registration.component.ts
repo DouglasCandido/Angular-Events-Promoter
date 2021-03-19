@@ -1,4 +1,3 @@
-import { setBackgroundImageDirective } from './../../directives/set-background-image.directive';
 import { Component, OnInit} from '@angular/core';
 
 @Component({
@@ -8,11 +7,15 @@ import { Component, OnInit} from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  imageLink = "assets/img/presentation7.jpg";
+
   constructor() { }
 
   ngOnInit(): void { }
 
 }
+
+
 
 
 

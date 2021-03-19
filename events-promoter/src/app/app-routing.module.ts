@@ -1,3 +1,5 @@
+import { RegistrationPromoterComponent } from './views/registration/registration-promoter/registration-promoter.component';
+import { RegistrationEnthusiastComponent } from './views/registration/registration-enthusiast/registration-enthusiast.component';
 import { DonationComponent } from './views/donation/donation.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { LoginComponent } from './views/login/login.component';
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "donation", component: DonationComponent },
   { path: "contact", component: ContactComponent },
+  { path: "registration/enthusiast", component:  RegistrationEnthusiastComponent },
+  { path: "registration/promoter", component:  RegistrationPromoterComponent }
 ];
 
 @NgModule({

@@ -11,7 +11,25 @@
         </mat-card-subtitle>
         <mat-card-content class="registration-content"></mat-card-content>
         <!-- <img mat-card-image class="registration-image" alt="presentation" src="assets/img/..."> -->
-        <mat-card-actions class="registration-actions">Container for buttons at the bottom of the card</mat-card-actions> 
+        <mat-card-actions class="registration-actions">
+            <span class="registration-actions-enthusiast">
+                <a routerLink="/registration/enthusiast" title="Você é um Entusiasta? Entusiasta é o usuário que quer apenas utilizar o app para se informar sobre os eventos que estão acontecendo na cidade.">
+                    Cadastro de Entusiasta
+                    <i class="material-icons">
+                        accessibility_new
+                    </i>
+                </a>
+            </span>
+            <br />
+            <span class="registration-actions-promoter">
+                <a routerLink="/registration/promoter" title="Você é um Promotor de Eventos? Promotor de Eventos é o usuário que quer utilizar o app para promover seus eventos na cidade.">
+                    Cadastro de Promotor de Eventos
+                    <i class="material-icons">
+                        hail
+                    </i>
+                </a>
+            </span>
+        </mat-card-actions> 
         <!-- <mat-card-footer class="registration-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
     </mat-card>
 </div>

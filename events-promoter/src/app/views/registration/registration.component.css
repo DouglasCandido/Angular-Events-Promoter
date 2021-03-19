@@ -11,7 +11,7 @@
 }
 
 .registration .registration-title {
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bolder;
     color: white;
     box-shadow: 10px 5px 5px black;
@@ -19,14 +19,14 @@
 }
 
 .registration .registration-subtitle {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     color: black;
     margin-top: 10px;
 }
 
 .registration .registration-content {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: yellow;
     font-style: oblique;
@@ -50,10 +50,10 @@
 }
 
 .registration .registration-actions a:active{
-    color: purple;
+    color: aqua;
 }
 
-i{
+i {
     font-size: 3rem;
 }
 

@@ -4,7 +4,7 @@
 }
 
 .about .about-title {
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bolder;
     color: black;
     box-shadow: 10px 5px 5px black;
@@ -12,14 +12,14 @@
 }
 
 .about .about-subtitle {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     margin-top: 10px;
 }
 
 .about .about-content {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: orange;
     font-style: oblique;

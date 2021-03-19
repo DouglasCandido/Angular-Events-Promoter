@@ -1,3 +1,4 @@
+import { setBackgroundImageDirective } from './directives/set-background-image.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +22,7 @@ import { DonationComponent } from './views/donation/donation.component';
 import { ContactComponent } from './views/contact/contact.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     IndexContentComponent,
     DonationComponent,
     ContactComponent,
+    setBackgroundImageDirective
   ],
   imports: [
     BrowserModule,

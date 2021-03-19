@@ -21,7 +21,8 @@
 .about .about-content {
     font-size: 25px;
     font-weight: bold;
-    color: darkred;
+    color: yellow;
+    font-style: oblique;
 }
 
 /*

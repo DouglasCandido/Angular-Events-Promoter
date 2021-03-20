@@ -7,7 +7,7 @@ export interface Enthusiast {
     contactPhone: string;
     username: string;
     password: string;
-    country: string;
+    // country: string;
     state: string;
     city: string;
     district: string;
@@ -17,3 +17,4 @@ export interface Enthusiast {
     registrationDate: Date;
 
 }
+

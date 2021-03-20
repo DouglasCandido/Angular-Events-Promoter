@@ -29,11 +29,13 @@
                 <mat-form-field>
                     <input required matInput type="password" placeholder="Password" [(ngModel)]="enthusiast.password" name="password" pattern=".{8,16}" title="8 ou até 16 caracteres">
                 </mat-form-field>
+                <!--
                 <mat-form-field>
                     <input required matInput type="text" placeholder="País" [(ngModel)]="enthusiast.country" name="country" value="Brasil" pattern="[A-Za-z].{3,56}" title="3 ou até 56 caracteres">
                 </mat-form-field>
+            -->
                 <mat-form-field>
-                    <input required matInput type="text" placeholder="Estado" [(ngModel)]="enthusiast.state" name="state" pattern="[A-Za-z].{3,56}" title="3 ou até 56 caracteres">
+                    <input required matInput type="text" placeholder="Estado" [(ngModel)]="enthusiast.state" name="state" pattern="[A-Z]{2}">
                 </mat-form-field>
                 <mat-form-field>
                     <input required matInput type="text" placeholder="Cidade" [(ngModel)]="enthusiast.city" name="city" pattern="[A-Za-z].{3,56}" title="3 ou até 56 caracteres">
@@ -67,6 +69,7 @@
         <!-- <mat-card-footer class="registration-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
     </mat-card>
 </div>
+
 
 
 

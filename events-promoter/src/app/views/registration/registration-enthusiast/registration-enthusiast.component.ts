@@ -18,7 +18,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
     contactPhone: "",
     username: "",
     password: "",
-    country: "",
+    // country: "",
     state: "",
     city: "",
     district: "",

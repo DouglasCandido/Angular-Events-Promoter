@@ -1,0 +1,53 @@
+.registration {
+    text-align: center;
+    background-color: gainsboro;
+    opacity: 0.8;
+    height: auto;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.registration .registration-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    background-color: darkblue;
+}
+
+.registration .registration-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.registration .registration-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellow;
+    font-style: oblique;
+}
+
+.registration .registration-actions {
+    font-weight: bold;
+    text-align: center;
+}
+
+.registration .registration-actions button {
+    position: relative;
+    bottom: 2.5rem;
+}
+
+i {
+    font-size: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+

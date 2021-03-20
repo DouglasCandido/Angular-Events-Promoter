@@ -21,7 +21,19 @@ import { IndexContentComponent } from './views/index-content/index-content.compo
 import { DonationComponent } from './views/donation/donation.component';
 import { ContactComponent } from './views/contact/contact.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { LOCALE_ID } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
+import localePT from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
+registerLocaleData(localePT);
 
 @NgModule({
   declarations: [
@@ -48,12 +60,24 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     MatToolbarModule,
     MatCardModule,
     AppRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: "pt-BR"
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 
 

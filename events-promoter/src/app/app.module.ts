@@ -18,8 +18,6 @@ import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './views/template/footer/footer.component';
 import { HeaderComponent } from './views/template/header/header.component';
 import { IndexContentComponent } from './views/index-content/index-content.component';
-import { DonationComponent } from './views/donation/donation.component';
-import { ContactComponent } from './views/contact/contact.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
@@ -32,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import localePT from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import {MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS} from '@angular/material/radio'; 
 
 registerLocaleData(localePT);
 
@@ -50,8 +49,6 @@ registerLocaleData(localePT);
     FooterComponent,
     HeaderComponent,
     IndexContentComponent,
-    DonationComponent,
-    ContactComponent,
     setBackgroundImageDirective
   ],
   imports: [
@@ -69,11 +66,18 @@ registerLocaleData(localePT);
     MatSnackBarModule,
     HttpClientModule,
     FormsModule,
+    MatRadioModule
   ],
-  providers: [{
+  providers: [
+    {
     provide: LOCALE_ID,
     useValue: "pt-BR"
-  }],
+    },
+    {
+      provide: MAT_RADIO_DEFAULT_OPTIONS,
+      useValue: { color: 'primary' }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

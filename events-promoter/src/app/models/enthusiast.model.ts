@@ -3,6 +3,8 @@ export interface Enthusiast {
     id?: number;
     name: string;
     cpf: string;
+    sex: string;
+    birthDate: Date;
     contactEmail: string;
     contactPhone: string;
     username: string;
@@ -14,7 +16,7 @@ export interface Enthusiast {
     street: string;
     number: number;
     zipCode: string;
-    registrationDate: Date;
+    registrationDate?: Date;
 
 }
 

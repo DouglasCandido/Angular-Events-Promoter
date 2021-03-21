@@ -14,6 +14,8 @@ export class RegistrationEnthusiastComponent implements OnInit {
 
     name: "",
     cpf: "",
+    sex: "",
+    birthDate: null,
     contactEmail: "",
     contactPhone: "",
     username: "",
@@ -24,8 +26,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
     district: "",
     street: "",
     number: null,
-    zipCode: "",
-    registrationDate: null
+    zipCode: ""
 
   }
 
@@ -50,5 +51,6 @@ export class RegistrationEnthusiastComponent implements OnInit {
   }
 
 }
+
 
 

@@ -50,4 +50,22 @@ form {
     flex-direction: column;
 }
 
+.sex {
+    text-align: start;
+    margin-bottom: 1rem;
+    color: gray;
+    font-weight: normal;
+}
+
+#radio-group-label-sex {
+    padding-right: 1rem;
+}
+
+#rbM {
+    padding-right: 1rem;
+}
+
+#rbF {
+    padding-right: 1rem;
+}
 

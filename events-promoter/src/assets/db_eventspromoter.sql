@@ -1,7 +1,6 @@
 drop schema db_eventspromoter;
 create schema db_eventspromoter;
-/* SET search_path TO db_eventspromoter; */
-/* use db_eventspromoter; */
+use db_eventspromoter; 
 
 create table if not exists uf
 (

@@ -1,13 +1,15 @@
 drop schema db_eventspromoter;
 create schema db_eventspromoter;
-SET search_path TO db_eventspromoter;
+/* SET search_path TO db_eventspromoter; */
+/* use db_eventspromoter; */
 
-create table if not exists uf(
+create table if not exists uf
+(
 
-    id serial not null,
-    sigla char(2) not null,
-    nome varchar(20) not null,
-    primary key(id)
+    id integer not null unique,
+    sigla char(2) not null unique,
+    nome varchar(20) not null unique,
+    primary key(sigla)
 
 );
 
@@ -42,4 +44,131 @@ insert into uf(sigla, nome) values('SC','Santa Catarina');
 insert into uf(sigla, nome) values('SP','São Paulo');
 insert into uf(sigla, nome) values('SE','Sergipe');
 insert into uf(sigla, nome) values('TO','Tocantins');
+
+create table if not exists enthusiast
+(
+
+    id integer not null unique,
+    name varchar(100),
+    cpf char(14) not null unique,
+    sex char(1) not null,
+    birthDate date not null,
+    username varchar(16) not null unique,
+    password varchar(16) not null,
+    contactEmail varchar(20) not null unique,
+    contactPhone char(13) not null unique,
+    registrationDate date not null,
+    state char(2) not null,
+    city varchar(56) not null,
+    district varchar(56) not null,
+    street varchar(56) not null,
+    number integer not null,
+    zipCode char(9) not null,
+    nome_imagem_perfil varchar(100) not null,
+    tamanho_imagem_perfil varchar(30) not null,
+    tipo_imagem_perfil text not null,
+    imagem_perfil longblob not null,
+    primary key(cpf),
+    foreign key(state) references uf(sigla)
+
+);
+
+select * from enthusiast;
+
+drop table enthusiast;
+
+create table if not exists promoter
+(
+
+    id integer not null unique,
+    name varchar(100),
+    cnpj char(18) not null unique,
+    sex char(1) not null,
+    birthDate date not null,
+    username varchar(16) not null unique,
+    password varchar(16) not null,
+    contactEmail varchar(20) not null unique,
+    contactPhone char(13) not null unique,
+    registrationDate date not null,
+    state char(2) not null,
+    city varchar(56) not null,
+    district varchar(56) not null,
+    street varchar(56) not null,
+    number integer not null,
+    zipCode char(9) not null,
+    likes integer,
+    dislikes integer,
+    site varchar(30) unique,
+    nome_imagem_perfil varchar(100) not null,
+    tamanho_imagem_perfil varchar(30) not null,
+    tipo_imagem_perfil text not null,
+    imagem_perfil longblob not null,
+    primary key(cnpj),
+    foreign key(state) references uf(sigla)
+
+);
+
+select * from promoter;
+
+drop table promoter;
+
+create table if not exists event
+(
+    id integer not null unique,
+    cnpj_promoter char(18) not null,
+    name varchar(50) not null,
+    description varchar(50) not null,
+    theme varchar(100) not null,
+    eventDate date not null,
+    state char(2) not null,
+    city varchar(56) not null,
+    district varchar(56) not null,
+    street varchar(56) not null,
+    number integer not null,
+    zipCode char(9) not null,
+    latitude numeric(10, 6) not null,
+    longitude numeric(10, 6) not null,
+    site varchar(30) unique,
+    numberOfEnthusiastsWhoDeclaredInterestInAttending integer,
+    likes integer,
+    dislikes integer,
+    tamanho_imagem_perfil varchar(30) not null,
+    tipo_imagem_perfil text not null,
+    imagem_perfil longblob not null,
+    primary key(id),
+    foreign key (cnpj_promoter) references promoter(cnpj)
+);
+
+select * from event;
+
+drop table event;
+
+create table if not exists comment
+(
+    id integer not null unique,
+    comment varchar(100) not null,
+    cpf_enthusiast char(14) not null,
+    id_event integer not null,
+    primary key(id),
+    foreign key(cpf_enthusiast) references enthusiast(cpf),
+    foreign key(id_event) references event(id)
+);
+
+select * from comment;
+
+drop table comment;
+
+create table if not exists enthusiastsWhoDeclaredInterestInAttending
+(
+    id integer not null,
+    cpf_enthusiast char(14) not null,
+    id_event integer not null,
+    primary key(id),
+    foreign key(cpf_enthusiast) references enthusiast(cpf),
+    foreign key(id_event) references event(id)
+);
+
+select * from enthusiastsWhoDeclaredInterestInAttending;
+
+drop table enthusiastsWhoDeclaredInterestInAttending;
 

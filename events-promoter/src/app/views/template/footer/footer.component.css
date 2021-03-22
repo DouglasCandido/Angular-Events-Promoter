@@ -3,9 +3,9 @@
     bottom: 0;
     display: flex;
     justify-content: flex-end;
-    background-color: green;
-    width: 100%;
-    height: 2.5rem;  
+    height: 2.5rem; 
+    color: green;
+    background-color:#282d32;
 }
   
 .footer > span {
@@ -19,4 +19,6 @@
 #copyright {
     margin-right: 54%;
 }
+
+
 

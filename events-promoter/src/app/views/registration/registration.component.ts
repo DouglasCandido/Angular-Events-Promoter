@@ -7,7 +7,7 @@ import { Component, OnInit} from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  imageLink = "assets/img/registration.jpg";
+  imageLink = "assets/img/background.png";
 
   constructor() { }
 

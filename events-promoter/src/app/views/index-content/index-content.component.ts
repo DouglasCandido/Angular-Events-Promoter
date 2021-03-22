@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexContentComponent implements OnInit {
 
+  imageLink = "assets/img/background.png";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+

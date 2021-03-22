@@ -1,36 +1,32 @@
 .about {
     text-align: center;
-    background-color: blueviolet;
 }
 
 .about .about-title {
     font-size: 3rem;
     font-weight: bolder;
-    color: black;
+    color: white;
     box-shadow: 10px 5px 5px black;
-    background-color: aqua;
+    background-color: darkblue;
+    width: 97%;
 }
 
 .about .about-subtitle {
     font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: black;
     margin-top: 10px;
 }
 
 .about .about-content {
     font-size: 1.5rem;
     font-weight: bold;
-    color: orange;
+    color: black;
     font-style: oblique;
 }
 
-/*
-.about .about-image {
-    width: 50%;
-    height: 50%;
-}
-*/
+
+
 
 
 

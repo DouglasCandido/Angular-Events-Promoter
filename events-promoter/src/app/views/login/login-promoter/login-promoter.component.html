@@ -1,1 +1,63 @@
-<p>login-promoter works!</p>
+<div setBackgroundImage [ngStyle]="{'background-image': 'url(' + imageLink + ')'}">
+    <mat-card class="login-promoter mat-elevation-z4">
+        <mat-card-title class="login-promoter-title">
+            Login de Promotor de Eventos
+            <i class="material-icons">
+                hail
+            </i>
+            <i class="material-icons">
+                login
+            </i>
+        </mat-card-title>
+        <mat-card-subtitle class="login-promoter-subtitle">
+            Olá, por favor realize o seu login para poder começar a usar o Events Promoter!
+        </mat-card-subtitle>
+        <mat-card-content class="login-promoter-content">
+            <form>
+                <mat-form-field class="mat-form-field-username">
+                    <input required matInput type="text" placeholder="Username" [(ngModel)]="promoter.username"
+                        name="username" pattern=".{8,16}" title="8 ou até 16 caracteres">
+                </mat-form-field>
+                <br />
+                <mat-form-field class="mat-form-field-password">
+                    <input required matInput type="password" placeholder="Password" [(ngModel)]="promoter.password_promoter"
+                        name="password_promoter" pattern=".{8,16}" title="8 ou até 16 caracteres">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <!-- <img mat-card-image class="login-image" alt="presentation" src="assets/img/..."> -->
+        <mat-card-actions class="login-promoter-actions">
+            <div class="login-promoter-actions-login">
+                <button mat-raised-button (click)="loginPromoter()" color="primary">
+                    Logar 
+                </button>
+                <button mat-raised-button (click)="cancel()" color="warn">
+                    Cancelar
+                </button>
+            </div>     
+        </mat-card-actions> 
+        <div class="login-promoter-actions-registration">
+            <span>
+                <a routerLink="/registration/promoter">
+                    Você ainda não se cadastrou? Cadastre-se!
+                    <i class="material-icons">
+                        hail
+                    </i>
+                    <i class="material-icons">
+                        app_registration 
+                    </i>
+                </a>
+            </span>
+        </div>
+        <!-- <mat-card-footer class="login-promoter-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
+    </mat-card>
+</div>
+
+
+
+
+
+
+
+
+

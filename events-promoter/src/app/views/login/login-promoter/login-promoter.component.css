@@ -1,0 +1,100 @@
+.login-promoter {
+    text-align: center;
+    background-color: gainsboro;
+    height: auto;
+    width: 50%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.login-promoter .login-promoter-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    background-color: darkblue;
+}
+
+.login-promoter .login-promoter-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.login-promoter .login-promoter-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    font-style: oblique;
+}
+
+.login-promoter .login-promoter-actions {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-promoter .login-promoter-actions a {
+    text-decoration: none;
+    color: navy;
+}
+
+.login-promoter .login-promoter-actions a:hover {
+    background-color: black;
+    color: orangered
+}
+
+.login-promoter .login-promoter-actions a:active{
+    color: aqua;
+}
+
+i {
+    font-size: 3rem;
+}
+
+.login-promoter-actions-registration {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-promoter-actions-registration a {
+    color: navy;
+}
+
+.login-promoter-actions-registration a:hover {
+    background-color: black;
+    color: yellow;
+}
+
+.login-promoter-actions-registration a:active {
+    color: aqua;
+}
+
+.login-promoter-actions-registration i {
+    font-size: 1.5rem;
+}
+
+.login-promoter-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-form-field-username {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mat-form-field-password {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+

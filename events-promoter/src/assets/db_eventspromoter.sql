@@ -5,7 +5,7 @@ use db_eventspromoter;
 create table if not exists uf
 (
 
-    id integer not null unique,
+    id integer not null unique auto_increment,
     sigla char(2) not null unique,
     nome varchar(20) not null unique,
     primary key(sigla)
@@ -47,7 +47,7 @@ insert into uf(sigla, nome) values('TO','Tocantins');
 create table if not exists enthusiast
 (
 
-    id integer not null unique,
+    id integer not null unique auto_increment,
     name varchar(100),
     cpf char(14) not null unique,
     sex char(1) not null,
@@ -79,7 +79,7 @@ drop table enthusiast;
 create table if not exists promoter
 (
 
-    id integer not null unique,
+    id integer not null unique auto_increment,
     name varchar(100),
     cnpj char(18) not null unique,
     sex char(1) not null,
@@ -113,7 +113,7 @@ drop table promoter;
 
 create table if not exists event
 (
-    id integer not null unique,
+    id integer not null unique auto_increment,
     cnpj_promoter char(18) not null,
     name varchar(50) not null,
     description varchar(50) not null,
@@ -128,9 +128,6 @@ create table if not exists event
     latitude numeric(10, 6) not null,
     longitude numeric(10, 6) not null,
     site varchar(30) unique,
-    numberOfEnthusiastsWhoDeclaredInterestInAttending integer,
-    likes integer,
-    dislikes integer,
     tamanho_imagem_perfil varchar(30) not null,
     tipo_imagem_perfil text not null,
     imagem_perfil longblob not null,
@@ -144,7 +141,7 @@ drop table event;
 
 create table if not exists comment
 (
-    id integer not null unique,
+    id integer not null unique auto_increment,
     comment varchar(100) not null,
     cpf_enthusiast char(14) not null,
     id_event integer not null,
@@ -157,17 +154,20 @@ select * from comment;
 
 drop table comment;
 
-create table if not exists enthusiastsWhoDeclaredInterestInAttending
+create table if not exists measureOfInterestInTheEvent
 (
-    id integer not null,
+    id integer not null unique auto_increment,
     cpf_enthusiast char(14) not null,
     id_event integer not null,
+    numberOfEnthusiastsWhoDeclaredInterestInAttending integer default 0,
+    likes integer default 0,
+    dislikes integer default 0,
     primary key(id),
     foreign key(cpf_enthusiast) references enthusiast(cpf),
     foreign key(id_event) references event(id)
 );
 
-select * from enthusiastsWhoDeclaredInterestInAttending;
+select * from measureOfInterestInTheEvent;
 
-drop table enthusiastsWhoDeclaredInterestInAttending;
+drop table measureOfInterestInTheEvent;
 

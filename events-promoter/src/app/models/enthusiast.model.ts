@@ -9,7 +9,6 @@ export interface Enthusiast {
     contactPhone: string;
     username: string;
     password: string;
-    // country: string;
     state: string;
     city: string;
     district: string;

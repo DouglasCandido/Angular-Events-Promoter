@@ -1,0 +1,87 @@
+.login {
+    text-align: center;
+    background-color: gainsboro;
+    height: auto;
+    width: 50%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.login .login-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    background-color: darkblue;
+}
+
+.login .login-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.login .login-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellow;
+    font-style: oblique;
+}
+
+.login .login-actions {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.login .login-actions a {
+    text-decoration: none;
+    color: navy;
+}
+
+.login .login-actions a:hover {
+    background-color: black;
+    color: orangered
+}
+
+.login .login-actions a:active{
+    color: aqua;
+}
+
+i {
+    font-size: 3rem;
+}
+
+.login-actions-login {
+    background-color: darkgray;
+}
+
+.login-actions-registration {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.login-actions-registration a {
+    color: navy;
+}
+
+.login-actions-registration a:hover {
+    background-color: black;
+    color: greenyellow;
+}
+
+.login-actions-registration a:active {
+    color: aqua;
+}
+
+.login-actions-registration i {
+    font-size: 1.5rem;
+}
+
+

@@ -1,3 +1,54 @@
 <div setBackgroundImage [ngStyle]="{'background-image': 'url(' + imageLink + ')'}">
+    <mat-card class="login mat-elevation-z4">
+        <mat-card-title class="login-title">
+            Login de usuário
+            <i class="material-icons">
+                login
+            </i>
+        </mat-card-title>
+        <mat-card-subtitle class="login-subtitle">
+            Olá, por favor realize o seu login para poder começar a usar o Events Promoter!
+        </mat-card-subtitle>
+        <mat-card-content class="login-content"></mat-card-content>
+        <!-- <img mat-card-image class="login-image" alt="presentation" src="assets/img/..."> -->
+        <mat-card-actions class="login-actions">
+            <div class="login-actions-login">
+                <span class="login-actions-enthusiast">
+                    <a routerLink="/login/enthusiast" title="Você é um Entusiasta? Entusiasta é o usuário que quer apenas utilizar o app para se informar sobre os eventos que estão acontecendo na cidade.">
+                        Login de Entusiasta
+                        <i class="material-icons">
+                            accessibility_new
+                        </i>
+                    </a>
+                </span>
+                <br />
+                <span class="login-actions-promoter">
+                    <a routerLink="/login/promoter" title="Você é um Promotor de Eventos? Promotor de Eventos é o usuário que quer utilizar o app para promover seus eventos na cidade.">
+                        Login de Promotor de Eventos
+                        <i class="material-icons">
+                            hail
+                        </i>
+                    </a>
+                </span>
+            </div>     
+        </mat-card-actions> 
+        <div class="login-actions-registration">
+            <span>
+                <a routerLink="/registration">
+                    Você ainda não se cadastrou? Cadastre-se!
+                    <i class="material-icons">
+                        app_registration
+                    </i>
+                </a>
+            </span>
+        </div>
+        <!-- <mat-card-footer class="login-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
+    </mat-card>
 </div>
+
+
+
+
+
+
 

@@ -1,3 +1,5 @@
+import { LoginPromoterComponent } from './views/login/login-promoter/login-promoter.component';
+import { LoginEnthusiastComponent } from './views/login/login-enthusiast/login-enthusiast.component';
 import { RegistrationPromoterComponent } from './views/registration/registration-promoter/registration-promoter.component';
 import { RegistrationEnthusiastComponent } from './views/registration/registration-enthusiast/registration-enthusiast.component';
 import { LoginComponent } from './views/login/login.component';
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: "registration", component: RegistrationComponent },
   { path: "registration/enthusiast", component:  RegistrationEnthusiastComponent },
   { path: "registration/promoter", component:  RegistrationPromoterComponent },
-  { path: "login", component: LoginComponent }
+  { path: "login", component: LoginComponent },
+  { path: "login/enthusiast", component:  LoginEnthusiastComponent },
+  { path: "login/promoter", component:  LoginPromoterComponent },
 ];
 
 @NgModule({

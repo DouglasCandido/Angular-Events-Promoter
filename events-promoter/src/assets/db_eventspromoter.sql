@@ -91,8 +91,6 @@ create table if not exists promoter
     street varchar(56) not null,
     number_place integer not null,
     zipCode char(9) not null,
-    likes integer,
-    dislikes integer,
     site varchar(30) unique,
     primary key(cnpj),
     foreign key(state) references uf(sigla)

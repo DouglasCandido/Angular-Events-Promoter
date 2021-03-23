@@ -4,6 +4,9 @@
         <i class="material-icons">
             accessibility_new
         </i>
+        <i class="material-icons">
+            app_registration
+        </i>
     </mat-card-title>
     <mat-card-subtitle class="registration-subtitle">
         Olá, Entusiasta, por favor realize o seu cadastro para poder começar a usar o Events Promoter!
@@ -42,7 +45,7 @@
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="email" placeholder="Email" [(ngModel)]="enthusiast.contactEmail"
-                    name="contactEmail" pattern="[A-Za-z0-9].{3,32}@[a-z].{3,16}.[a-z]{3}"
+                    name="contactEmail" pattern="[a-z0-9].{2,16}@[a-z].{2,16}.[a-z]{3}"
                     title="Exemplo: nome.sobrenome@gmail.com">
             </mat-form-field>
             <mat-form-field>

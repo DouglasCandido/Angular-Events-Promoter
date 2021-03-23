@@ -38,7 +38,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
 
     this.enthusiastService.create(this.enthusiast).subscribe(() => {
     this.enthusiastService.showMessage("Você foi cadastrado com sucesso!");
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/login/enthusiast"]);
     });
 
   }

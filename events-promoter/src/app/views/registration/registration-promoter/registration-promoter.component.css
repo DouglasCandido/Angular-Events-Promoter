@@ -1,0 +1,73 @@
+.registration {
+    text-align: center;
+    background-color: gainsboro;
+    height: auto;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.registration .registration-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    background-color: darkblue;
+}
+
+.registration .registration-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.registration .registration-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    font-style: oblique;
+}
+
+.registration .registration-actions {
+    font-weight: bold;
+    text-align: center;
+}
+
+.registration .registration-actions button {
+    position: relative;
+    bottom: 2.5rem;
+}
+
+i {
+    font-size: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sex {
+    text-align: start;
+    margin-bottom: 1rem;
+    color: gray;
+    font-weight: normal;
+}
+
+#radio-group-label-sex {
+    padding-right: 1rem;
+}
+
+#rbM {
+    padding-right: 1rem;
+}
+
+#rbF {
+    padding-right: 1rem;
+}
+
+
+

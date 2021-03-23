@@ -1,4 +1,4 @@
-import { Enthusiast } from './../models/enthusiast.model';
+import { Promoter } from './../models/promoter.model';
 import { catchError, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -8,9 +8,9 @@ import { EMPTY, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class EnthusiastService {
+export class PromoterService {
 
-  baseUrl = "http://localhost:3001/enthusiasts";
+  baseUrl = "http://localhost:3001/promoters";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -26,51 +26,51 @@ export class EnthusiastService {
     
   }
 
-  create(enthusiast: Enthusiast): Observable<Enthusiast> {
+  create(promoter: Promoter): Observable<Promoter> {
 
-    return this.http.post<Enthusiast>(this.baseUrl, enthusiast).pipe(
+    return this.http.post<Promoter>(this.baseUrl, promoter).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  read(): Observable<Enthusiast[]> {
+  read(): Observable<Promoter[]> {
 
-    return this.http.get<Enthusiast[]>(this.baseUrl).pipe(
+    return this.http.get<Promoter[]>(this.baseUrl).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  readById(id: number): Observable<Enthusiast> {
+  readById(id: number): Observable<Promoter> {
 
     const url = `${this.baseUrl}/${id}`;
 
-    return this.http.get<Enthusiast>(url).pipe(
+    return this.http.get<Promoter>(url).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  update(enthusiast: Enthusiast): Observable<Enthusiast> {
+  update(promoter: Promoter): Observable<Promoter> {
 
-    const url = `${this.baseUrl}/${enthusiast.id}`;
+    const url = `${this.baseUrl}/${promoter.id}`;
 
-    return this.http.put<Enthusiast>(url, enthusiast).pipe(
+    return this.http.put<Promoter>(url, promoter).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  delete(id: number): Observable<Enthusiast> {
+  delete(id: number): Observable<Promoter> {
 
     const url = `${this.baseUrl}/${id}`;
 
-    return this.http.delete<Enthusiast>(url).pipe(
+    return this.http.delete<Promoter>(url).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
@@ -78,11 +78,11 @@ export class EnthusiastService {
   }
 
   // Criar Método de Login
-  login(username: string, password_enthusiast: string): Observable<Enthusiast> {
+  login(username: string, password_promoter: string): Observable<Promoter> {
 
-    const url = `${this.baseUrl}/${username}&${password_enthusiast}`;
+    const url = `${this.baseUrl}/${username}&${password_promoter}`;
 
-    return this.http.get<Enthusiast>(url).pipe(
+    return this.http.get<Promoter>(url).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
@@ -100,5 +100,4 @@ export class EnthusiastService {
   }
 
 }
-
 

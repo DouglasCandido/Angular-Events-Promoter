@@ -1,1 +1,62 @@
-<p>login-enthusiast works!</p>
+<div setBackgroundImage [ngStyle]="{'background-image': 'url(' + imageLink + ')'}">
+    <mat-card class="login-enthusiast mat-elevation-z4">
+        <mat-card-title class="login-enthusiast-title">
+            Login de Entusiasta
+            <i class="material-icons">
+                login
+            </i>
+            <i class="material-icons">
+                accessibility_new
+            </i>
+        </mat-card-title>
+        <mat-card-subtitle class="login-enthusiast-subtitle">
+            Olá, por favor realize o seu login para poder começar a usar o Events Promoter!
+        </mat-card-subtitle>
+        <mat-card-content class="login-enthusiast-content">
+            <form>
+                <mat-form-field class="mat-form-field-username">
+                    <input required matInput type="text" placeholder="Username" [(ngModel)]="enthusiast.username"
+                        name="username" pattern=".{8,16}" title="8 ou até 16 caracteres">
+                </mat-form-field>
+                <br />
+                <mat-form-field class="mat-form-field-password">
+                    <input required matInput type="password" placeholder="Password" [(ngModel)]="enthusiast.password_enthusiast"
+                        name="password_enthusiast" pattern=".{8,16}" title="8 ou até 16 caracteres">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <!-- <img mat-card-image class="login-image" alt="presentation" src="assets/img/..."> -->
+        <mat-card-actions class="login-enthusiast-actions">
+            <div class="login-enthusiast-actions-login">
+                <button mat-raised-button (click)="loginEnthusiast()" color="primary">
+                    Logar 
+                </button>
+                <button mat-raised-button (click)="cancel()" color="warn">
+                    Cancelar
+                </button>
+            </div>     
+        </mat-card-actions> 
+        <div class="login-enthusiast-actions-registration">
+            <span>
+                <a routerLink="/registration/enthusiast">
+                    Você ainda não se cadastrou? Cadastre-se!
+                    <i class="material-icons">
+                        app_registration 
+                    </i>
+                    <i class="material-icons">
+                        accessibility_new
+                    </i>
+                </a>
+            </span>
+        </div>
+        <!-- <mat-card-footer class="login-enthusiast-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
+    </mat-card>
+</div>
+
+
+
+
+
+
+
+

@@ -77,6 +77,18 @@ export class EnthusiastService {
 
   }
 
+  // Criar Método de Login
+  login(username: string, password_enthusiast: string): Observable<Enthusiast> {
+
+    const url = `${this.baseUrl}/${username}&${password_enthusiast}`;
+
+    return this.http.get<Enthusiast>(url).pipe(
+      map(object => object),
+      catchError(e => this.errorHandler(e))
+    );
+
+  }
+
   errorHandler(e: any): Observable<any> {
 
     console.log(e);

@@ -1,3 +1,5 @@
+import { HomePromoterComponent } from './views/home-promoter/home-promoter.component';
+import { HomeEnthusiastComponent } from './views/home-enthusiast/home-enthusiast.component';
 import { LoginPromoterComponent } from './views/login/login-promoter/login-promoter.component';
 import { LoginEnthusiastComponent } from './views/login/login-enthusiast/login-enthusiast.component';
 import { RegistrationPromoterComponent } from './views/registration/registration-promoter/registration-promoter.component';
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "login/enthusiast", component:  LoginEnthusiastComponent },
   { path: "login/promoter", component:  LoginPromoterComponent },
+  { path: "home_enthusiast", component: HomeEnthusiastComponent },
+  { path: "home_promoter", component: HomePromoterComponent }
 ];
 
 @NgModule({

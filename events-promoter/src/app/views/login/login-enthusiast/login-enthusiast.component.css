@@ -1,0 +1,102 @@
+.login-enthusiast {
+    text-align: center;
+    background-color: gainsboro;
+    height: auto;
+    width: 50%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.login-enthusiast .login-enthusiast-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    background-color: darkblue;
+}
+
+.login-enthusiast .login-enthusiast-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.login-enthusiast .login-enthusiast-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellow;
+    font-style: oblique;
+}
+
+.login-enthusiast .login-enthusiast-actions {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.login-enthusiast .login-enthusiast-actions a {
+    text-decoration: none;
+    color: navy;
+}
+
+.login-enthusiast .login-enthusiast-actions a:hover {
+    background-color: black;
+    color: orangered
+}
+
+.login-enthusiast .login-enthusiast-actions a:active{
+    color: aqua;
+}
+
+i {
+    font-size: 3rem;
+}
+
+.login-enthusiast-actions-registration {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.login-enthusiast-actions-registration a {
+    color: navy;
+}
+
+.login-enthusiast-actions-registration a:hover {
+    background-color: black;
+    color: greenyellow;
+}
+
+.login-enthusiast-actions-registration a:active {
+    color: aqua;
+}
+
+.login-enthusiast-actions-registration i {
+    font-size: 1.5rem;
+}
+
+.login-enthusiast-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-form-field-username {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mat-form-field-password {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+

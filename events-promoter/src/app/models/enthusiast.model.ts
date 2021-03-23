@@ -1,21 +1,22 @@
 export interface Enthusiast {
 
     id?: number;
-    name: string;
+    name_enthusiast: string;
     cpf: string;
     sex: string;
     birthDate: Date;
+    username: string;
+    password_enthusiast: string;
     contactEmail: string;
     contactPhone: string;
-    username: string;
-    password: string;
+    registrationDate?: Date;
     state: string;
     city: string;
     district: string;
     street: string;
-    number: number;
+    number_place: number;
     zipCode: string;
-    registrationDate?: Date;
-
+    
 }
+
 

@@ -48,12 +48,12 @@ create table if not exists enthusiast
 (
 
     id integer not null unique auto_increment,
-    name varchar(100),
+    name_enthusiast varchar(100),
     cpf char(14) not null unique,
     sex char(1) not null,
     birthDate date not null,
     username varchar(16) not null unique,
-    password varchar(16) not null,
+    password_enthusiast varchar(16) not null,
     contactEmail varchar(20) not null unique,
     contactPhone char(13) not null unique,
     registrationDate date not null,
@@ -61,12 +61,8 @@ create table if not exists enthusiast
     city varchar(56) not null,
     district varchar(56) not null,
     street varchar(56) not null,
-    number integer not null,
+    number_place integer not null,
     zipCode char(9) not null,
-    nome_imagem_perfil varchar(100) not null,
-    tamanho_imagem_perfil varchar(30) not null,
-    tipo_imagem_perfil text not null,
-    imagem_perfil longblob not null,
     primary key(cpf),
     foreign key(state) references uf(sigla)
 
@@ -80,12 +76,12 @@ create table if not exists promoter
 (
 
     id integer not null unique auto_increment,
-    name varchar(100),
+    name_promoter varchar(100),
     cnpj char(18) not null unique,
     sex char(1) not null,
     birthDate date not null,
     username varchar(16) not null unique,
-    password varchar(16) not null,
+    password_promoter varchar(16) not null,
     contactEmail varchar(20) not null unique,
     contactPhone char(13) not null unique,
     registrationDate date not null,
@@ -93,15 +89,11 @@ create table if not exists promoter
     city varchar(56) not null,
     district varchar(56) not null,
     street varchar(56) not null,
-    number integer not null,
+    number_place integer not null,
     zipCode char(9) not null,
     likes integer,
     dislikes integer,
     site varchar(30) unique,
-    nome_imagem_perfil varchar(100) not null,
-    tamanho_imagem_perfil varchar(30) not null,
-    tipo_imagem_perfil text not null,
-    imagem_perfil longblob not null,
     primary key(cnpj),
     foreign key(state) references uf(sigla)
 
@@ -115,22 +107,19 @@ create table if not exists event
 (
     id integer not null unique auto_increment,
     cnpj_promoter char(18) not null,
-    name varchar(50) not null,
-    description varchar(50) not null,
+    name_event varchar(50) not null,
+    description_event varchar(50) not null,
     theme varchar(100) not null,
     eventDate date not null,
     state char(2) not null,
     city varchar(56) not null,
     district varchar(56) not null,
     street varchar(56) not null,
-    number integer not null,
+    number_place integer not null,
     zipCode char(9) not null,
     latitude numeric(10, 6) not null,
     longitude numeric(10, 6) not null,
     site varchar(30) unique,
-    tamanho_imagem_perfil varchar(30) not null,
-    tipo_imagem_perfil text not null,
-    imagem_perfil longblob not null,
     primary key(id),
     foreign key (cnpj_promoter) references promoter(cnpj)
 );
@@ -142,7 +131,7 @@ drop table event;
 create table if not exists comment
 (
     id integer not null unique auto_increment,
-    comment varchar(100) not null,
+    comment_about_the_event varchar(100) not null,
     cpf_enthusiast char(14) not null,
     id_event integer not null,
     primary key(id),

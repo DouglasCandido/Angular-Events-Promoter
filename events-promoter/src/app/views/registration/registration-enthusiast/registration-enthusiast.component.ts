@@ -12,20 +12,19 @@ export class RegistrationEnthusiastComponent implements OnInit {
 
   enthusiast: Enthusiast = {
 
-    name: "",
+    name_enthusiast: "",
     cpf: "",
     sex: "",
     birthDate: null,
+    username: "",
+    password_enthusiast: "",
     contactEmail: "",
     contactPhone: "",
-    username: "",
-    password: "",
-    // country: "",
     state: "",
     city: "",
     district: "",
     street: "",
-    number: null,
+    number_place: null,
     zipCode: ""
 
   }

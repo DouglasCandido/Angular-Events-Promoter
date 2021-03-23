@@ -31,7 +31,6 @@ import { FormsModule } from '@angular/forms'
 import localePT from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import {MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS} from '@angular/material/radio';
-import { NgxMatFileInputModule } from '@angular-material-components/file-input'; 
 
 registerLocaleData(localePT);
 
@@ -68,7 +67,6 @@ registerLocaleData(localePT);
     HttpClientModule,
     FormsModule,
     MatRadioModule,
-    NgxMatFileInputModule
   ],
   providers: [
     {

@@ -27,14 +27,13 @@
 .login-enthusiast .login-enthusiast-content {
     font-size: 1.5rem;
     font-weight: bold;
-    color: yellow;
+    color: black;
     font-style: oblique;
 }
 
 .login-enthusiast .login-enthusiast-actions {
     font-size: 2.5rem;
     font-weight: bold;
-    line-height: 5rem;
     text-align: center;
 }
 
@@ -59,7 +58,6 @@ i {
 .login-enthusiast-actions-registration {
     font-size: 1.5rem;
     font-weight: bold;
-    line-height: 5rem;
     text-align: center;
 }
 

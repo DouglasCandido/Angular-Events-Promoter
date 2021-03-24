@@ -64,7 +64,7 @@ create table if not exists enthusiast
     number_place integer not null,
     zipCode varchar(9) not null,
     primary key(cpf),
-    foreign key(state) references uf(sigla)
+    foreign key(state) references uf(sigla) 
 
 );
 
@@ -93,7 +93,7 @@ create table if not exists promoter
     zipCode varchar(9) not null,
     site varchar(30) unique,
     primary key(cnpj),
-    foreign key(state) references uf(sigla)
+    foreign key(state) references uf(sigla) 
 
 );
 

@@ -9,7 +9,6 @@ export interface Enthusiast {
     password_enthusiast?: string;
     contactEmail?: string;
     contactPhone?: string;
-    registrationDate?: string; // Date
     state?: string;
     city?: string;
     district?: string;

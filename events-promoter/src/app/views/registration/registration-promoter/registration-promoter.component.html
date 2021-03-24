@@ -69,7 +69,7 @@
                     pattern="[A-Za-z].{3,56}" title="3 ou até 56 caracteres">
             </mat-form-field>
             <mat-form-field>
-                <input required matInput type="number" placeholder="Número da residência"
+                <input required matInput type="text" placeholder="Número da residência"
                     [(ngModel)]="promoter.number_place" name="number_place" pattern="[0-9]">
             </mat-form-field>
             <mat-form-field>
@@ -81,11 +81,6 @@
                     name="site" pattern="[a-z].{2,16}.[a-z].{2,16}.[a-z]{3}"
                     title="Exemplo: www.site.com">
             </mat-form-field>
-            <!--
-            <mat-form-field>
-                <input required matInput type="date" placeholder="Data do cadastro" [(ngModel)]="promoter.registrationDate" name="registrationDate">
-            </mat-form-field>
-            -->
         </form>
     </mat-card-content>
     <!-- <img mat-card-image class="registration-image" alt="presentation" src="assets/img/..."> -->

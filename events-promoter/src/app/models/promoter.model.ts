@@ -9,7 +9,6 @@ export interface Promoter {
     password_promoter?: string;
     contactEmail?: string;
     contactPhone?: string;
-    registrationDate?: string; // Date
     state?: string;
     city?: string;
     district?: string;
@@ -19,5 +18,6 @@ export interface Promoter {
     site?: string;
     
 }
+
 
 

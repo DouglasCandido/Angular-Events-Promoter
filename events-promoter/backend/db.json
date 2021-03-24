@@ -1,0 +1,145 @@
+{
+  "ufs": [
+    {
+      "nome": "Acre",
+      "sigla": "AC"
+    },
+    {
+      "nome": "Alagoas",
+      "sigla": "AL"
+    },
+    {
+      "nome": "Amapá",
+      "sigla": "AP"
+    },
+    {
+      "nome": "Amazonas",
+      "sigla": "AM"
+    },
+    {
+      "nome": "Bahia",
+      "sigla": "BA"
+    },
+    {
+      "nome": "Ceará",
+      "sigla": "CE"
+    },
+    {
+      "nome": "Distrito Federal",
+      "sigla": "DF"
+    },
+    {
+      "nome": "Espírito Santo",
+      "sigla": "ES"
+    },
+    {
+      "nome": "Goiás",
+      "sigla": "GO"
+    },
+    {
+      "nome": "Maranhão",
+      "sigla": "MA"
+    },
+    {
+      "nome": "Mato Grosso",
+      "sigla": "MT"
+    },
+    {
+      "nome": "Mato Grosso do Sul",
+      "sigla": "MS"
+    },
+    {
+      "nome": "Minas Gerais",
+      "sigla": "MG"
+    },
+    {
+      "nome": "Pará",
+      "sigla": "PA"
+    },
+    {
+      "nome": "Paraíba",
+      "sigla": "PB"
+    },
+    {
+      "nome": "Paraná",
+      "sigla": "PR"
+    },
+    {
+      "nome": "Pernambuco",
+      "sigla": "PE"
+    },
+    {
+      "nome": "Piauí",
+      "sigla": "PI"
+    },
+    {
+      "nome": "Rio de Janeiro",
+      "sigla": "RJ"
+    },
+    {
+      "nome": "Rio Grande do Norte",
+      "sigla": "RN"
+    },
+    {
+      "nome": "Rio Grande do Sul",
+      "sigla": "RS"
+    },
+    {
+      "nome": "Rondônia",
+      "sigla": "RO"
+    },
+    {
+      "nome": "Roraima",
+      "sigla": "RR"
+    },
+    {
+      "nome": "Santa Catarina",
+      "sigla": "SC"
+    },
+    {
+      "nome": "São Paulo",
+      "sigla": "SP"
+    },
+    {
+      "nome": "Sergipe",
+      "sigla": "SE"
+    },
+    {
+      "nome": "Tocantins",
+      "sigla": "TO"
+    }
+  ],
+  "enthusiasts": [
+    {
+      "id": 1,
+      "name_enthusiast": "Douglas Mateus Soares Cândido da Silva",
+      "cpf": "018.308.654-63",
+      "sex": "M",
+      "birthDate": "1997-09-23",
+      "username": "usuariodouglas",
+      "password_enthusiast": "usuariodouglas",
+      "contactEmail": "douglas.candido1997@gmail.com",
+      "contactPhone": "84999065876",
+      "registrationDate": "2021-03-23",
+      "state": "RN",
+      "city": "Caicó",
+      "district": "Acampamento",
+      "street": "João Vitoriano",
+      "number_place": 157,
+      "zipCode": "59300-000"
+    }
+  ],
+  "promoters": [
+    {}
+  ],
+  "events": [
+    {}
+  ],
+  "comments": [
+    {}
+  ],
+  "measureOfInterestInTheEvent": [
+    {}
+  ]
+}
+

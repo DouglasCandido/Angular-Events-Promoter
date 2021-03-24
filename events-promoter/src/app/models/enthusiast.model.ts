@@ -4,12 +4,12 @@ export interface Enthusiast {
     name_enthusiast?: string;
     cpf?: string;
     sex?: string;
-    birthDate?: Date;
+    birthDate?: string; // Date
     username?: string;
     password_enthusiast?: string;
     contactEmail?: string;
     contactPhone?: string;
-    registrationDate?: Date;
+    registrationDate?: string; // Date
     state?: string;
     city?: string;
     district?: string;

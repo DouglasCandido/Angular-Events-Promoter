@@ -4,12 +4,12 @@ export interface Promoter {
     name_promoter?: string;
     cnpj?: string;
     sex?: string;
-    birthDate?: Date;
+    birthDate?: string; // Date
     username?: string;
     password_promoter?: string;
     contactEmail?: string;
     contactPhone?: string;
-    registrationDate?: Date;
+    registrationDate?: string; // Date
     state?: string;
     city?: string;
     district?: string;
@@ -19,4 +19,5 @@ export interface Promoter {
     site?: string;
     
 }
+
 

@@ -49,20 +49,20 @@ create table if not exists enthusiast
 
     id integer not null unique auto_increment,
     name_enthusiast varchar(100),
-    cpf char(14) not null unique,
+    cpf varchar(14) not null unique,
     sex char(1) not null,
     birthDate date not null,
     username varchar(16) not null unique,
     password_enthusiast varchar(16) not null,
     contactEmail varchar(20) not null unique,
-    contactPhone char(13) not null unique,
+    contactPhone varchar(13) not null unique,
     registrationDate date not null,
     state char(2) not null,
     city varchar(56) not null,
     district varchar(56) not null,
     street varchar(56) not null,
     number_place integer not null,
-    zipCode char(9) not null,
+    zipCode varchar(9) not null,
     primary key(cpf),
     foreign key(state) references uf(sigla)
 
@@ -77,20 +77,20 @@ create table if not exists promoter
 
     id integer not null unique auto_increment,
     name_promoter varchar(100),
-    cnpj char(18) not null unique,
+    cnpj varchar(18) not null unique,
     sex char(1) not null,
     birthDate date not null,
     username varchar(16) not null unique,
     password_promoter varchar(16) not null,
     contactEmail varchar(20) not null unique,
-    contactPhone char(13) not null unique,
+    contactPhone varchar(13) not null unique,
     registrationDate date not null,
     state char(2) not null,
     city varchar(56) not null,
     district varchar(56) not null,
     street varchar(56) not null,
     number_place integer not null,
-    zipCode char(9) not null,
+    zipCode varchar(9) not null,
     site varchar(30) unique,
     primary key(cnpj),
     foreign key(state) references uf(sigla)
@@ -104,7 +104,7 @@ drop table promoter;
 create table if not exists event
 (
     id integer not null unique auto_increment,
-    cnpj_promoter char(18) not null,
+    cnpj_promoter varchar(18) not null,
     name_event varchar(50) not null,
     description_event varchar(50) not null,
     theme varchar(100) not null,
@@ -114,7 +114,7 @@ create table if not exists event
     district varchar(56) not null,
     street varchar(56) not null,
     number_place integer not null,
-    zipCode char(9) not null,
+    zipCode varchar(9) not null,
     latitude numeric(10, 6) not null,
     longitude numeric(10, 6) not null,
     site varchar(30) unique,
@@ -130,7 +130,7 @@ create table if not exists comment
 (
     id integer not null unique auto_increment,
     comment_about_the_event varchar(100) not null,
-    cpf_enthusiast char(14) not null,
+    cpf_enthusiast varchar(14) not null,
     id_event integer not null,
     primary key(id),
     foreign key(cpf_enthusiast) references enthusiast(cpf),
@@ -144,7 +144,7 @@ drop table comment;
 create table if not exists measureOfInterestInTheEvent
 (
     id integer not null unique auto_increment,
-    cpf_enthusiast char(14) not null,
+    cpf_enthusiast varchar(14) not null,
     id_event integer not null,
     numberOfEnthusiastsWhoDeclaredInterestInAttending integer default 0,
     likes integer default 0,
@@ -157,4 +157,5 @@ create table if not exists measureOfInterestInTheEvent
 select * from measureOfInterestInTheEvent;
 
 drop table measureOfInterestInTheEvent;
+
 

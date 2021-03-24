@@ -77,7 +77,6 @@ export class PromoterService {
 
   }
 
-  // Criar Método de Login
   login(username: string, password_promoter: string): Observable<Promoter> {
 
     const url = `${this.baseUrl}/${username}&${password_promoter}`;

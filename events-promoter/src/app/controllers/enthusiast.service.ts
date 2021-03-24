@@ -77,7 +77,6 @@ export class EnthusiastService {
 
   }
 
-  // Criar Método de Login
   login(username: string, password_enthusiast: string): Observable<Enthusiast> {
 
     const url = `${this.baseUrl}/${username}&${password_enthusiast}`;
@@ -100,5 +99,6 @@ export class EnthusiastService {
   }
 
 }
+
 
 

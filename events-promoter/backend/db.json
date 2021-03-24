@@ -1,161 +1,202 @@
 {
-    "ufs": [
-        {
-            "nome": "Acre",
-            "sigla": "AC"
-        },
-        {
-            "nome": "Alagoas",
-            "sigla": "AL"
-        },
-        {
-            "nome": "Amapá",
-            "sigla": "AP"
-        },
-        {
-            "nome": "Amazonas",
-            "sigla": "AM"
-        },
-        {
-            "nome": "Bahia",
-            "sigla": "BA"
-        },
-        {
-            "nome": "Ceará",
-            "sigla": "CE"
-        },
-        {
-            "nome": "Distrito Federal",
-            "sigla": "DF"
-        },
-        {
-            "nome": "Espírito Santo",
-            "sigla": "ES"
-        },
-        {
-            "nome": "Goiás",
-            "sigla": "GO"
-        },
-        {
-            "nome": "Maranhão",
-            "sigla": "MA"
-        },
-        {
-            "nome": "Mato Grosso",
-            "sigla": "MT"
-        },
-        {
-            "nome": "Mato Grosso do Sul",
-            "sigla": "MS"
-        },
-        {
-            "nome": "Minas Gerais",
-            "sigla": "MG"
-        },
-        {
-            "nome": "Pará",
-            "sigla": "PA"
-        },
-        {
-            "nome": "Paraíba",
-            "sigla": "PB"
-        },
-        {
-            "nome": "Paraná",
-            "sigla": "PR"
-        },
-        {
-            "nome": "Pernambuco",
-            "sigla": "PE"
-        },
-        {
-            "nome": "Piauí",
-            "sigla": "PI"
-        },
-        {
-            "nome": "Rio de Janeiro",
-            "sigla": "RJ"
-        },
-        {
-            "nome": "Rio Grande do Norte",
-            "sigla": "RN"
-        },
-        {
-            "nome": "Rio Grande do Sul",
-            "sigla": "RS"
-        },
-        {
-            "nome": "Rondônia",
-            "sigla": "RO"
-        },
-        {
-            "nome": "Roraima",
-            "sigla": "RR"
-        },
-        {
-            "nome": "Santa Catarina",
-            "sigla": "SC"
-        },
-        {
-            "nome": "São Paulo",
-            "sigla": "SP"
-        },
-        {
-            "nome": "Sergipe",
-            "sigla": "SE"
-        },
-        {
-            "nome": "Tocantins",
-            "sigla": "TO"
-        }
-    ],
-    "enthusiasts": [
-        {
-            "id": 1,
-            "name_enthusiast": "Douglas Mateus Soares Cândido da Silva",
-            "cpf": "018.308.654-63",
-            "sex": "M",
-            "birthDate": "1997-09-23",
-            "username": "douglascandido",
-            "password_enthusiast": "douglascandido",
-            "contactEmail": "douglas.candido1997@gmail.com",
-            "contactPhone": "84999065876",
-            "state": "RN",
-            "city": "Caicó",
-            "district": "Acampamento",
-            "street": "João Vitoriano",
-            "number_place": 157,
-            "zipCode": "59300-000"
-        }
-    ],
-    "promoters": [
-        {
-            "id": 1,
-            "name_promoter": "Bruce Wayne",
-            "cnpj": "11.111.111/1111-11",
-            "sex": "M",
-            "birthDate": "1963-02-19",
-            "username": "brucewayne",
-            "password_promoter": "brucewayne",
-            "contactEmail": "brucewayne@batman.com",
-            "contactPhone": "84911111111",
-            "state": "RN",
-            "city": "Caicó",
-            "district": "Paraíba",
-            "street": "Francisco Batista",
-            "number_place": 1,
-            "zipCode": "59300-000",
-            "site": "www.dccomics.com"
-        }
-    ],
-    "events": [
-        {}
-    ],
-    "comments": [
-        {}
-    ],
-    "measureOfInterestInTheEvent": [
-        {}
-    ]
+  "ufs": [
+    {
+      "nome": "Acre",
+      "sigla": "AC"
+    },
+    {
+      "nome": "Alagoas",
+      "sigla": "AL"
+    },
+    {
+      "nome": "Amapá",
+      "sigla": "AP"
+    },
+    {
+      "nome": "Amazonas",
+      "sigla": "AM"
+    },
+    {
+      "nome": "Bahia",
+      "sigla": "BA"
+    },
+    {
+      "nome": "Ceará",
+      "sigla": "CE"
+    },
+    {
+      "nome": "Distrito Federal",
+      "sigla": "DF"
+    },
+    {
+      "nome": "Espírito Santo",
+      "sigla": "ES"
+    },
+    {
+      "nome": "Goiás",
+      "sigla": "GO"
+    },
+    {
+      "nome": "Maranhão",
+      "sigla": "MA"
+    },
+    {
+      "nome": "Mato Grosso",
+      "sigla": "MT"
+    },
+    {
+      "nome": "Mato Grosso do Sul",
+      "sigla": "MS"
+    },
+    {
+      "nome": "Minas Gerais",
+      "sigla": "MG"
+    },
+    {
+      "nome": "Pará",
+      "sigla": "PA"
+    },
+    {
+      "nome": "Paraíba",
+      "sigla": "PB"
+    },
+    {
+      "nome": "Paraná",
+      "sigla": "PR"
+    },
+    {
+      "nome": "Pernambuco",
+      "sigla": "PE"
+    },
+    {
+      "nome": "Piauí",
+      "sigla": "PI"
+    },
+    {
+      "nome": "Rio de Janeiro",
+      "sigla": "RJ"
+    },
+    {
+      "nome": "Rio Grande do Norte",
+      "sigla": "RN"
+    },
+    {
+      "nome": "Rio Grande do Sul",
+      "sigla": "RS"
+    },
+    {
+      "nome": "Rondônia",
+      "sigla": "RO"
+    },
+    {
+      "nome": "Roraima",
+      "sigla": "RR"
+    },
+    {
+      "nome": "Santa Catarina",
+      "sigla": "SC"
+    },
+    {
+      "nome": "São Paulo",
+      "sigla": "SP"
+    },
+    {
+      "nome": "Sergipe",
+      "sigla": "SE"
+    },
+    {
+      "nome": "Tocantins",
+      "sigla": "TO"
+    }
+  ],
+  "enthusiasts": [
+    {
+      "id": 1,
+      "name_enthusiast": "Douglas Mateus Soares Cândido da Silva",
+      "cpf": "018.308.654-63",
+      "sex": "M",
+      "birthDate": "1997-09-23",
+      "username": "douglascandido",
+      "password_enthusiast": "douglascandido",
+      "contactEmail": "douglas.candido1997@gmail.com",
+      "contactPhone": "84999065876",
+      "state": "RN",
+      "city": "Caicó",
+      "district": "Acampamento",
+      "street": "João Vitoriano",
+      "number_place": 157,
+      "zipCode": "59300-000"
+    },
+    {
+      "name_enthusiast": "Barry Allen",
+      "cpf": "222.222.222-22",
+      "sex": "M",
+      "birthDate": "1989-03-14",
+      "username": "barryallen",
+      "password_enthusiast": "barryallen",
+      "contactEmail": "barry.allen@dccomics.com",
+      "contactPhone": "84922222222",
+      "state": "RN",
+      "city": "Ouro Branco",
+      "district": "Castelo dos Montes",
+      "street": "Gleide Correia",
+      "number_place": "207",
+      "zipCode": "59347-000",
+      "id": 2
+    }
+  ],
+  "promoters": [
+    {
+      "id": 1,
+      "name_promoter": "Bruce Wayne",
+      "cnpj": "11.111.111/1111-11",
+      "sex": "M",
+      "birthDate": "1963-02-19",
+      "username": "brucewayne",
+      "password_promoter": "brucewayne",
+      "contactEmail": "brucewayne@dccomics.com",
+      "contactPhone": "84911111111",
+      "state": "RN",
+      "city": "Caicó",
+      "district": "Paraíba",
+      "street": "Francisco Batista",
+      "number_place": 391,
+      "zipCode": "59300-000",
+      "site": "www.dccomics.com"
+    },
+    {
+      "name_promoter": "Helena Bertinelli",
+      "cnpj": "22.222.222/2222-22",
+      "sex": "F",
+      "birthDate": "1990-02-14",
+      "username": "helenabertinelli",
+      "password_promoter": "helenabertinelli",
+      "contactEmail": "helena.huntress@dccomics.com",
+      "contactPhone": "84933333333",
+      "state": "RN",
+      "city": "Jardim de Piranhas",
+      "district": "Centro",
+      "street": "15 de Novembro",
+      "number_place": 4,
+      "zipCode": "59324-000",
+      "site": "shop.dccomics.com",
+      "id": 2
+    }
+  ],
+  "events": [
+    {
+        
+    }
+  ],
+  "comments": [
+    {
+
+    }
+  ],
+  "measureOfInterestInTheEvent": [
+    {
+
+    }
+  ]
 }
 

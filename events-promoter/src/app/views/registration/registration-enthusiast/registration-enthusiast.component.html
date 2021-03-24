@@ -14,8 +14,8 @@
     <mat-card-content class="registration-content">
         <form>
             <mat-form-field>
-                <input required matInput type="text" placeholder="Nome" [(ngModel)]="enthusiast.name_enthusiast" name="name_enthusiast"
-                    pattern=".{3,100}" title="3 ou até 100 caracteres">
+                <input required matInput type="text" placeholder="Nome" [(ngModel)]="enthusiast.name_enthusiast"
+                    name="name_enthusiast" pattern=".{3,100}" title="3 ou até 100 caracteres">
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="CPF" [(ngModel)]="enthusiast.cpf" name="cpf"
@@ -25,9 +25,9 @@
                 <label id="radio-group-label-sex">Sexo:</label>
                 <mat-radio-group [(ngModel)]="enthusiast.sex" name="sex" aria-labelledby="radio-group-label-sex"
                     class="radio-group-sex">
-                    <mat-radio-button labelPosition='before' name="male" value="m" id="rbM"> Masculino
+                    <mat-radio-button labelPosition='before' name="male" value="M" id="rbM"> Masculino
                     </mat-radio-button>
-                    <mat-radio-button labelPosition='before' name="female" value="f" id="rbF">Feminino
+                    <mat-radio-button labelPosition='before' name="female" value="F" id="rbF">Feminino
                     </mat-radio-button>
                 </mat-radio-group>
             </div>
@@ -40,13 +40,13 @@
                     name="username" pattern=".{8,16}" title="8 ou até 16 caracteres">
             </mat-form-field>
             <mat-form-field>
-                <input required matInput type="password" placeholder="Password" [(ngModel)]="enthusiast.password_enthusiast"
-                    name="password_enthusiast" pattern=".{8,16}" title="8 ou até 16 caracteres">
+                <input required matInput type="password" placeholder="Password"
+                    [(ngModel)]="enthusiast.password_enthusiast" name="password_enthusiast" pattern=".{8,16}"
+                    title="8 ou até 16 caracteres">
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="email" placeholder="Email" [(ngModel)]="enthusiast.contactEmail"
-                    name="contactEmail" pattern="[a-z0-9].{2,16}@[a-z].{2,16}.[a-z]{3}"
-                    title="Exemplo: nome.sobrenome@gmail.com">
+                    name="contactEmail" title="Exemplo: nome.sobrenome@gmail.com">
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="tel" placeholder="Telefone" [(ngModel)]="enthusiast.contactPhone"
@@ -69,8 +69,8 @@
                     pattern="[A-Za-z].{3,56}" title="3 ou até 56 caracteres">
             </mat-form-field>
             <mat-form-field>
-                <input required matInput type="text" placeholder="Número da residência"
-                    [(ngModel)]="enthusiast.number_place" name="number_place" pattern="[0-9]">
+                <input required matInput type="number" placeholder="Número da residência"
+                    [(ngModel)]="enthusiast.number_place" name="number_place" pattern="[0-9].{0,}">
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="CEP" [(ngModel)]="enthusiast.zipCode" name="zipCode"
@@ -89,5 +89,4 @@
     </mat-card-actions>
     <!-- <mat-card-footer class="registration-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
 </mat-card>
-
 

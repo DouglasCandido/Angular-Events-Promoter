@@ -15,8 +15,8 @@ import { RegistrationEnthusiastComponent } from './views/registration/registrati
 import { RegistrationPromoterComponent } from './views/registration/registration-promoter/registration-promoter.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
-import { FooterComponent } from './views/template/footer/footer.component';
-import { HeaderComponent } from './views/template/header/header.component';
+import { FooterComponent } from './components/template/footer/footer.component';
+import { HeaderComponent } from './components/template/header/header.component';
 import { IndexContentComponent } from './views/index-content/index-content.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { MatFormFieldModule } from '@angular/material/form-field'

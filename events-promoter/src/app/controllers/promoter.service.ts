@@ -79,7 +79,7 @@ export class PromoterService {
 
   login(username: string, password_promoter: string): Observable<Promoter> {
 
-    const url = `${this.baseUrl}/${username}&${password_promoter}`;
+    const url = `${this.baseUrl}/`;
 
     return this.http.get<Promoter>(url).pipe(
       map(object => object),
@@ -99,4 +99,5 @@ export class PromoterService {
   }
 
 }
+
 

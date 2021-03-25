@@ -1,0 +1,24 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+      <mat-nav-list class="nav-list">
+        <a mat-list-item routerLink="/home_enthusiast/events_read">
+          <i class="material-icons">
+            calendar_today
+          </i>
+          Eventos disponíveis
+        </a>
+        <a mat-list-item class="nav-item nav-link" (click)="logout()">
+          Logout
+          <i class="material-icons icon-logout">
+            logout
+          </i>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <!--
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    -->
+</mat-sidenav-container>
+

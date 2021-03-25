@@ -16,6 +16,7 @@ export interface Promoter {
     number_place?: number;
     zipCode?: string;
     site?: string;
+    token?: string;
     
 }
 

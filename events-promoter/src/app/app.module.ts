@@ -1,3 +1,6 @@
+import { EnthusiastJWtInterceptor } from './helpers/enthusiast-jwt-interceptor.interceptor';
+import { EnthusiastErrorInterceptor } from './helpers/enthusiast-error-interceptor.interceptor';
+import { fakeAuthenticationBackendEnthusiastProvider } from './helpers/fake-authentication-backend-enthusiast';
 import { setBackgroundImageDirective } from './directives/set-background-image.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
@@ -26,11 +29,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import localePT from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import {MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS} from '@angular/material/radio';
+import { EventsReadComponent } from './views/events-read/events-read.component';
+import { SideNavEnthusiastComponent } from './components/template/side-nav-enthusiast/side-nav-enthusiast.component';
 
 registerLocaleData(localePT);
 
@@ -49,7 +54,9 @@ registerLocaleData(localePT);
     FooterComponent,
     HeaderComponent,
     IndexContentComponent,
-    setBackgroundImageDirective
+    setBackgroundImageDirective,
+    EventsReadComponent,
+    SideNavEnthusiastComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +83,10 @@ registerLocaleData(localePT);
     {
       provide: MAT_RADIO_DEFAULT_OPTIONS,
       useValue: { color: 'primary' }
-    }
+    },
+    { provide: HTTP_INTERCEPTORS, useClass: EnthusiastJWtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: EnthusiastErrorInterceptor, multi: true },
+    fakeAuthenticationBackendEnthusiastProvider
   ],
   bootstrap: [AppComponent]
 })

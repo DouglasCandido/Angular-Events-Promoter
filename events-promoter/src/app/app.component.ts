@@ -13,7 +13,11 @@ export class AppComponent implements AfterViewInit {
 
   title = 'Events Promoter';
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef) { 
+
+
+    
+  }
 
   ngAfterViewInit() {
 
@@ -22,4 +26,5 @@ export class AppComponent implements AfterViewInit {
   }
   
 }
+
 

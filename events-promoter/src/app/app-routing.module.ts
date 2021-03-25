@@ -1,3 +1,5 @@
+import { AuthGuardEnthusiast } from './helpers/auth-guard-enthusiast.guard';
+import { EventsReadComponent } from './views/events-read/events-read.component';
 import { HomePromoterComponent } from './views/home-promoter/home-promoter.component';
 import { HomeEnthusiastComponent } from './views/home-enthusiast/home-enthusiast.component';
 import { LoginPromoterComponent } from './views/login/login-promoter/login-promoter.component';
@@ -18,8 +20,10 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "login/enthusiast", component:  LoginEnthusiastComponent },
   { path: "login/promoter", component:  LoginPromoterComponent },
-  { path: "home_enthusiast", component: HomeEnthusiastComponent },
-  { path: "home_promoter", component: HomePromoterComponent }
+  { path: "home_enthusiast", component: HomeEnthusiastComponent, canActivate: [AuthGuardEnthusiast] },
+  { path: "home_promoter", component: HomePromoterComponent },
+  { path: "home_enthusiast/events_read", component: EventsReadComponent, canActivate: [AuthGuardEnthusiast] },
+  { path: "**", redirectTo: "" }
 ];
 
 @NgModule({
@@ -29,6 +33,7 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
+export const appRoutingModule = RouterModule.forRoot(routes);
 
 
 

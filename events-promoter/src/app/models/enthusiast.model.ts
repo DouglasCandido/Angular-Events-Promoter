@@ -15,6 +15,7 @@ export interface Enthusiast {
     street?: string;
     number_place?: number;
     zipCode?: string;
+    token?: string;
     
 }
 

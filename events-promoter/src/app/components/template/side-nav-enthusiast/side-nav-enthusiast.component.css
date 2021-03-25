@@ -1,0 +1,29 @@
+.sidenav {
+    background-color: #3F51B5;
+    width: 200px;
+    font-weight: bold;
+  }
+    
+.sidenav a {
+    color: black;
+    font-weight: bold;
+}
+  
+.sidenav a:hover {
+    background-color: darkred;
+}
+    
+.sidenav i {
+    padding-right: 10px;
+}
+    
+.content {
+    padding: 16px;
+    background-color: gainsboro;
+}
+  
+.icon-logout {
+    margin-left: 1rem;
+}
+
+

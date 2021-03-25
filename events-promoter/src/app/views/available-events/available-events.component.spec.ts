@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventsReadComponent } from './events-read.component';
+import { AvailableEventsComponent } from './available-events.component';
 
 describe('EventsReadComponent', () => {
-  let component: EventsReadComponent;
-  let fixture: ComponentFixture<EventsReadComponent>;
+  let component: AvailableEventsComponent;
+  let fixture: ComponentFixture<AvailableEventsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventsReadComponent ]
+      declarations: [ AvailableEventsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventsReadComponent);
+    fixture = TestBed.createComponent(AvailableEventsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,3 +23,4 @@ describe('EventsReadComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

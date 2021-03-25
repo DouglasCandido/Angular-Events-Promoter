@@ -34,8 +34,10 @@ import { FormsModule } from '@angular/forms'
 import localePT from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import {MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS} from '@angular/material/radio';
-import { EventsReadComponent } from './views/events-read/events-read.component';
+import { AvailableEventsComponent } from './views/available-events/available-events.component';
 import { SideNavEnthusiastComponent } from './components/template/side-nav-enthusiast/side-nav-enthusiast.component';
+import { HeaderEnthusiastComponent } from './components/template/header-enthusiast/header-enthusiast.component';
+import { FooterLoggedComponent } from './components/template/footer-logged/footer-logged.component';
 
 registerLocaleData(localePT);
 
@@ -55,8 +57,10 @@ registerLocaleData(localePT);
     HeaderComponent,
     IndexContentComponent,
     setBackgroundImageDirective,
-    EventsReadComponent,
+    AvailableEventsComponent,
     SideNavEnthusiastComponent,
+    HeaderEnthusiastComponent,
+    FooterLoggedComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Enthusiast } from '../models/enthusiast.model';
+import { Enthusiast } from './../models/enthusiast.model';
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
@@ -6,8 +6,6 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
 // Preciso puxar os dados JSON do backend e converter para objetos e utilizar neste array
 let users: Enthusiast[] = [
-    
-    // Este array deve ser preenchido desta forma, este array é uma coleção de objetos
     {
         id: 1,
         name_enthusiast: "Douglas Mateus Soares Cândido da Silva",
@@ -25,7 +23,6 @@ let users: Enthusiast[] = [
         number_place: 157,
         zipCode: "59300-000"
     }
-
 ]
 
 @Injectable()
@@ -55,7 +52,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         }
 
         function authenticate() {
-            
+
             const { username, password } = body;
 
             const user = users.find(x => x.username === username && x.password_enthusiast === password);
@@ -63,6 +60,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             if (!user) return error('Username or password is incorrect');
 
             return ok({
+                id: user.id,
                 name_enthusiast: user.name_enthusiast,
                 token: 'fake-jwt-token'
             })
@@ -114,5 +112,7 @@ export const fakeAuthenticationBackendEnthusiastProvider = {
     multi: true
 
 };
+
+
 
 

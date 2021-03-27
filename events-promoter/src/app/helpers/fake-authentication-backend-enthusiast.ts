@@ -1,29 +1,24 @@
-import { Enthusiast } from './../models/enthusiast.model';
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
+import axios from 'axios';
 
-// Preciso puxar os dados JSON do backend e converter para objetos e utilizar neste array
-let users: Enthusiast[] = [
-    {
-        id: 1,
-        name_enthusiast: "Douglas Mateus Soares Cândido da Silva",
-        cpf: "018.308.654-63",
-        sex: "M",
-        birthDate: "1997-09-23",
-        username: "douglascandido",
-        password_enthusiast: "douglascandido",
-        contactEmail: "douglas.candido1997@gmail.com",
-        contactPhone: "84999065876",
-        state: "RN",
-        city: "Caicó",
-        district: "Acampamento",
-        street: "João Vitoriano",
-        number_place: 157,
-        zipCode: "59300-000"
-    }
-]
+let users
+
+const fetchData = async () => {
+    const result = await axios.get(
+        "http://localhost:3001/enthusiasts",
+    );
+
+    return result;
+};
+
+fetchData().then(res => {
+    users = res.data
+})
+
+users = JSON.stringify(users, null, 2)
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {

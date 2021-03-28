@@ -21,8 +21,9 @@
                 </mat-form-field>
                 <br />
                 <mat-form-field class="mat-form-field-password">
-                    <input required matInput type="password" placeholder="Password" [(ngModel)]="enthusiast.password_enthusiast"
-                        name="password_enthusiast" pattern=".{8,16}" title="8 ou até 16 caracteres">
+                    <input required matInput type="password" placeholder="Password"
+                        [(ngModel)]="enthusiast.password_enthusiast" name="password_enthusiast" pattern=".{8,16}"
+                        title="8 ou até 16 caracteres">
                 </mat-form-field>
             </form>
         </mat-card-content>
@@ -30,13 +31,31 @@
         <mat-card-actions class="login-enthusiast-actions">
             <div class="login-enthusiast-actions-login">
                 <button mat-raised-button (click)="loginEnthusiast()" color="primary">
-                    Logar 
+                    Logar
+                    <i class="material-icons">
+                        login
+                    </i>
                 </button>
                 <button mat-raised-button (click)="cancel()" color="warn">
                     Cancelar
+                    <i class="material-icons">
+                        cancel
+                    </i>
                 </button>
-            </div>     
-        </mat-card-actions> 
+                <button mat-raised-button (click)="loginWithGoogle()" color="warn">
+                    Login with Google
+                    <i class="material-icons">
+                        android
+                    </i>
+                </button>
+                <button mat-raised-button (click)="loginWithFacebook()" color="primary">
+                    Login with Facebook
+                    <i class="material-icons">
+                        facebook
+                    </i>
+                </button>
+            </div>
+        </mat-card-actions>
         <div class="login-enthusiast-actions-registration">
             <span>
                 <a routerLink="/registration/enthusiast">
@@ -45,7 +64,7 @@
                         accessibility_new
                     </i>
                     <i class="material-icons">
-                        app_registration 
+                        app_registration
                     </i>
                 </a>
             </span>
@@ -54,13 +73,4 @@
     </mat-card>
 </div>
 <app-footer></app-footer>
-
-
-
-
-
-
-
-
-
 

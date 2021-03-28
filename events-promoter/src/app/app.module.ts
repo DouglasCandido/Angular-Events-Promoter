@@ -38,6 +38,7 @@ import { AvailableEventsComponent } from './views/available-events/available-eve
 import { SideNavEnthusiastComponent } from './components/template/side-nav-enthusiast/side-nav-enthusiast.component';
 import { HeaderEnthusiastComponent } from './components/template/header-enthusiast/header-enthusiast.component';
 import { FooterLoggedComponent } from './components/template/footer-logged/footer-logged.component';
+import { SocialLoginModule, SocialAuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
 
 registerLocaleData(localePT);
 
@@ -78,6 +79,7 @@ registerLocaleData(localePT);
     HttpClientModule,
     FormsModule,
     MatRadioModule,
+    SocialLoginModule
   ],
   providers: [
     {
@@ -90,7 +92,23 @@ registerLocaleData(localePT);
     },
     { provide: HTTP_INTERCEPTORS, useClass: EnthusiastJWtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: EnthusiastErrorInterceptor, multi: true },
-    fakeAuthenticationBackendEnthusiastProvider
+    fakeAuthenticationBackendEnthusiastProvider,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('468463051684-577lmp0peueptu1gjagf5cutnd77403c.apps.googleusercontent.com')
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('797542117787307')
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    }    
   ],
   bootstrap: [AppComponent]
 })

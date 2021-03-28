@@ -93,7 +93,10 @@ i {
     box-sizing: border-box;
 }
 
-
+.login-enthusiast-actions-login {
+    display: flex;
+    flex-direction: row;
+}
 
 
 

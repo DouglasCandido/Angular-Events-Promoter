@@ -62,8 +62,6 @@ export class LoginEnthusiastComponent implements OnInit {
 
       }
 
-      console.log(this.socialUser);
-
     });
 
   }
@@ -102,6 +100,7 @@ export class LoginEnthusiastComponent implements OnInit {
   }
 
 }
+
 
 
 

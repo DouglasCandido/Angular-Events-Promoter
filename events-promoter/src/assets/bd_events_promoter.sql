@@ -1,10 +1,10 @@
-# drop schema bd_events_promoter;
+drop schema bd_events_promoter;
 
-# create schema bd_events_promoter;
+create schema bd_events_promoter;
 
 use bd_events_promoter; 
 
-# ALTER DATABASE bd_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER DATABASE bd_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # Tabela utilizada para armazenar os estados cadastrados no sistema
 create table if not exists uf(
@@ -68,10 +68,6 @@ create table if not exists enthusiast
 
 );
 
-select * from enthusiast;
-
-drop table enthusiast;
-
 create table if not exists promoter
 (
 
@@ -97,10 +93,6 @@ create table if not exists promoter
 
 );
 
-select * from promoter;
-
-drop table promoter;
-
 create table if not exists event
 (
     id integer not null unique auto_increment,
@@ -123,10 +115,6 @@ create table if not exists event
     foreign key (state) references uf(sigla)
 );
 
-select * from event;
-
-drop table event;
-
 create table if not exists comment
 (
     id integer not null unique auto_increment,
@@ -139,10 +127,6 @@ create table if not exists comment
     foreign key(id_event) references event(id)
 );
 
-select * from comment;
-
-drop table comment;
-
 create table if not exists measureOfInterestInTheEvent
 (
     id integer not null unique auto_increment,
@@ -151,13 +135,8 @@ create table if not exists measureOfInterestInTheEvent
     likes integer default 0,
     dislikes integer default 0,
     primary key(id),
-    foreign key(cpf_enthusiast) references enthusiast(cpf),
     foreign key(id_event) references event(id)
 );
-
-select * from measureOfInterestInTheEvent;
-
-drop table measureOfInterestInTheEvent;
 
 # Tabela utilizada para armazenar as inscrições dos entusiastas em eventos
 create table if not exists subscription(
@@ -172,7 +151,5 @@ create table if not exists subscription(
     
 );
 
-select * from subscription;
 
-drop table subscription;
 

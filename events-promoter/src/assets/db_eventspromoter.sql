@@ -1,6 +1,6 @@
-drop schema db_events_promoter;
+# drop schema db_events_promoter;
 
-create schema db_events_promoter;
+# create schema db_events_promoter;
 
 use db_eventspromoter; 
 

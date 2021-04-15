@@ -1,3 +1,4 @@
+import { AuthGuardPromoter } from './helpers/auth-guard-promoter.guard';
 import { AvailableEventsComponent } from './views/available-events/available-events.component';
 import { AuthGuardEnthusiast } from './helpers/auth-guard-enthusiast.guard';
 import { HomePromoterComponent } from './views/home-promoter/home-promoter.component';
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: "login/enthusiast", component:  LoginEnthusiastComponent },
   { path: "login/promoter", component:  LoginPromoterComponent },
   { path: "home_enthusiast", component: HomeEnthusiastComponent, canActivate: [AuthGuardEnthusiast] },
-  { path: "home_promoter", component: HomePromoterComponent },
+  { path: "home_promoter", component: HomePromoterComponent, canActivate: [AuthGuardPromoter] },
   { path: "home_enthusiast/available_events", component: AvailableEventsComponent, canActivate: [AuthGuardEnthusiast] },
   { path: "**", redirectTo: "" }
 ];

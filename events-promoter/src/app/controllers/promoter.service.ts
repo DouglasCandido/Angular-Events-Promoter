@@ -77,17 +77,6 @@ export class PromoterService {
 
   }
 
-  login(username: string, password_promoter: string): Observable<Promoter> {
-
-    const url = `${this.baseUrl}/`;
-
-    return this.http.get<Promoter>(url).pipe(
-      map(object => object),
-      catchError(e => this.errorHandler(e))
-    );
-
-  }
-
   errorHandler(e: any): Observable<any> {
 
     console.log(e);

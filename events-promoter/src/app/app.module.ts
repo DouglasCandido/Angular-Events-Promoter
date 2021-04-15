@@ -1,3 +1,6 @@
+import { fakeAuthenticationBackendPromoterProvider } from './helpers/fake-authentication-backend-promoter';
+import { PromoterErrorInterceptor } from './helpers/promoter-error-interceptor.interceptor';
+import { PromoterJWtInterceptor } from './helpers/promoter-jwt-interceptor.interceptor';
 import { EnthusiastJWtInterceptor } from './helpers/enthusiast-jwt-interceptor.interceptor';
 import { EnthusiastErrorInterceptor } from './helpers/enthusiast-error-interceptor.interceptor';
 import { fakeAuthenticationBackendEnthusiastProvider } from './helpers/fake-authentication-backend-enthusiast';
@@ -93,6 +96,9 @@ registerLocaleData(localePT);
     { provide: HTTP_INTERCEPTORS, useClass: EnthusiastJWtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: EnthusiastErrorInterceptor, multi: true },
     fakeAuthenticationBackendEnthusiastProvider,
+    { provide: HTTP_INTERCEPTORS, useClass: PromoterJWtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: PromoterErrorInterceptor, multi: true },
+    fakeAuthenticationBackendPromoterProvider,
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

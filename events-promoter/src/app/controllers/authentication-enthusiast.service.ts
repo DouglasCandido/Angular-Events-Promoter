@@ -14,7 +14,7 @@ export class AuthenticationEnthusiastService {
 
     constructor(private http: HttpClient, private socialAuthService: SocialAuthService) {
 
-        this.currentUserSubject = new BehaviorSubject<Enthusiast>(JSON.parse(localStorage.getItem('currentUser')));
+        this.currentUserSubject = new BehaviorSubject<Enthusiast>(JSON.parse(localStorage.getItem('currentUserEnthusiast')));
         
         this.currentUser = this.currentUserSubject.asObservable();
 
@@ -31,7 +31,7 @@ export class AuthenticationEnthusiastService {
         return this.http.post<any>(`http://localhost:3001/enthusiasts`, { username, password })
             .pipe(map(user => {
 
-                localStorage.setItem('currentUser', JSON.stringify(user));
+                localStorage.setItem('currentUserEnthusiast', JSON.stringify(user));
 
                 this.currentUserSubject.next(user);
 
@@ -45,7 +45,7 @@ export class AuthenticationEnthusiastService {
 
         this.socialAuthService.signOut();
 
-        localStorage.removeItem('currentUser');
+        localStorage.removeItem('currentUserEnthusiast');
         
         this.currentUserSubject.next(null);
 
@@ -55,7 +55,7 @@ export class AuthenticationEnthusiastService {
 
         let user = {username: temporaryUsername, password_enthusiast: temporaryPassword, name_enthusiast: temporaryName}
 
-        localStorage.setItem('currentUser', JSON.stringify(user));
+        localStorage.setItem('currentUserEnthusiast', JSON.stringify(user));
 
         this.currentUserSubject.next(user);
 
@@ -63,9 +63,7 @@ export class AuthenticationEnthusiastService {
 
     }
 
-
 }
-
 
 
 

@@ -8,7 +8,7 @@ let users
 
 const fetchData = async () => {
     const result = await axios.get(
-        "http://localhost:3001/enthusiasts",
+        "http://localhost:3001/promoters",
     );
 
     return result;
@@ -37,7 +37,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
             switch (true) {
 
-                case url.endsWith('/enthusiasts') && method === 'POST':
+                case url.endsWith('/promoters') && method === 'POST':
                     return authenticate();
                 default:
                     return next.handle(request);
@@ -50,13 +50,13 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
             const { username, password } = body;
 
-            const user = users.find(x => x.username === username && x.password_enthusiast === password);
+            const user = users.find(x => x.username === username && x.password_promoter === password);
 
             if (!user) return error('Username or password is incorrect');
 
             return ok({
                 id: user.id,
-                name_enthusiast: user.name_enthusiast,
+                name_promoter: user.name_promoter,
                 token: 'fake-jwt-token'
             })
 
@@ -98,7 +98,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
 }
 
-export const fakeAuthenticationBackendEnthusiastProvider = {
+export const fakeAuthenticationBackendPromoterProvider = {
 
     provide: HTTP_INTERCEPTORS,
 

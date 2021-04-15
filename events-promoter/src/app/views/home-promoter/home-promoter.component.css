@@ -1,0 +1,22 @@
+.home-presentation {
+    background-color: yellow;
+    margin-left: 13%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-presentation-title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .home-presentation-subtitle {
+    font-size: 1rem;
+  }
+  
+
+  

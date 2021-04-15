@@ -1,11 +1,23 @@
 <mat-sidenav-container class="container">
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
       <mat-nav-list class="nav-list">
-        <a mat-list-item routerLink="/home_enthusiast/available_events">
+        <a mat-list-item routerLink="/home_promoter/my_current_promoting_events">
           <i class="material-icons">
             event_available
           </i>
-          Eventos disponíveis
+          Meus eventos atuais
+        </a>
+        <a mat-list-item routerLink="/home_promoter/promote_new_event">
+            <i class="material-icons">
+              edit_calendar
+            </i>
+            Promover novo evento
+          </a>
+        <a mat-list-item routerLink="/home_promoter/my_past_promoted_events">
+            <i class="material-icons">
+              event
+            </i>
+            Meus eventos anteriores
         </a>
         <a mat-list-item class="nav-item nav-link" (click)="logout()">
           Logout

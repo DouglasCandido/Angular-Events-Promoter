@@ -1,10 +1,10 @@
-# drop schema db_events_promoter;
+# drop schema bd_events_promoter;
 
-# create schema db_events_promoter;
+# create schema bd_events_promoter;
 
-use db_eventspromoter; 
+use bd_events_promoter; 
 
-# ALTER DATABASE db_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# ALTER DATABASE bd_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # Tabela utilizada para armazenar os estados cadastrados no sistema
 create table if not exists uf(

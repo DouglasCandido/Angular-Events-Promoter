@@ -34,4 +34,12 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.enthusiasts = require("./enthusiast.js")(sequelize, Sequelize);
+db.promoters = require("./promoter.js")(sequelize, Sequelize);
+db.events = require("./event.js")(sequelize, Sequelize);
+db.subscriptions = require("./subscription.js")(sequelize, Sequelize);
+db.comments = require("./comment.js")(sequelize, Sequelize);
+db.measureOfInterestInTheEvent = require("./measureofinterestintheevent.js")(sequelize, Sequelize);
+
 module.exports = db;
+

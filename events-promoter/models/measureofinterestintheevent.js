@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   measureOfInterestInTheEvent.init({
-    // id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     id_event: DataTypes.INTEGER,
     numberOfEnthusiastsWhoDeclaredInterestInAttending: DataTypes.INTEGER,
     likes: DataTypes.INTEGER,
@@ -25,4 +29,6 @@ module.exports = (sequelize, DataTypes) => {
   });
   return measureOfInterestInTheEvent;
 };
+
+
 

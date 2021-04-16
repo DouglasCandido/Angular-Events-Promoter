@@ -14,11 +14,19 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Promoter.init({
-    // id: DataTypes.INTEGER,
+    /*
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true
+    },
+    */
     name_promoter: DataTypes.STRING,
-    cnpj: DataTypes.STRING,
+    cnpj: {
+      type: DataTypes.STRING,
+      primaryKey: true
+    },
     sex: DataTypes.STRING,
-    birthDate: DataTypes.DATE,
+    birthDate: DataTypes.DATEONLY,
     username: DataTypes.STRING,
     password_promoter: DataTypes.STRING,
     contactEmail: DataTypes.STRING,
@@ -29,9 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     street: DataTypes.STRING,
     number_place: DataTypes.INTEGER,
     zipCode: DataTypes.STRING,
-    site: DataTypes.STRING,
+    site: DataTypes.STRING
     // registrationDate: DataTypes.DATE,
-    token: DataTypes.STRING
+    // token: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Promoter',

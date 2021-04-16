@@ -44,9 +44,9 @@ export class EnthusiastService {
 
   }
 
-  readById(id: number): Observable<Enthusiast> {
+  readByCPF(cpf: string): Observable<Enthusiast> {
 
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.baseUrl}/${cpf}`;
 
     return this.http.get<Enthusiast>(url).pipe(
       map(object => object),
@@ -57,7 +57,7 @@ export class EnthusiastService {
 
   update(enthusiast: Enthusiast): Observable<Enthusiast> {
 
-    const url = `${this.baseUrl}/${enthusiast.id}`;
+    const url = `${this.baseUrl}/${enthusiast.cpf}`;
 
     return this.http.put<Enthusiast>(url, enthusiast).pipe(
       map(object => object),
@@ -66,9 +66,9 @@ export class EnthusiastService {
 
   }
 
-  delete(id: number): Observable<Enthusiast> {
+  delete(cpf: string): Observable<Enthusiast> {
 
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${this.baseUrl}/${cpf}`;
 
     return this.http.delete<Enthusiast>(url).pipe(
       map(object => object),

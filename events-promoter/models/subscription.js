@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   subscription.init({
-    // id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     id_event: DataTypes.INTEGER,
     cpf_enthusiast: DataTypes.STRING
     // subscriptionRegistrationDate: DataTypes.DATE
@@ -24,4 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   return subscription;
 };
+
+
+
 

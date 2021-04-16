@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Comment.init({
-    // id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     comment_about_the_event: DataTypes.STRING,
     cpf_enthusiast: DataTypes.STRING,
     id_event: DataTypes.INTEGER
@@ -25,4 +29,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Comment;
 };
+
 

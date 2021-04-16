@@ -8,7 +8,7 @@ let users
 
 const fetchData = async () => {
     const result = await axios.get(
-        "http://localhost:3001/promoters",
+        "http://localhost:8080/api/promoters",
     );
 
     return result;
@@ -37,7 +37,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
             switch (true) {
 
-                case url.endsWith('/promoters') && method === 'POST':
+                case url.endsWith('/promoters/authenticate') && method === 'POST':
                     return authenticate();
                 default:
                     return next.handle(request);

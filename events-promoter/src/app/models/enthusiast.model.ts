@@ -1,10 +1,10 @@
 export interface Enthusiast {
 
-    id?: number;
+    // id?: number;
     name_enthusiast?: string;
     cpf?: string;
     sex?: string;
-    birthDate?: string; // Date
+    birthDate?: Date; // Date
     username?: string;
     password_enthusiast?: string;
     contactEmail?: string;

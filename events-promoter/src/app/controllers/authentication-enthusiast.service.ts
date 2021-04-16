@@ -28,7 +28,7 @@ export class AuthenticationEnthusiastService {
 
     login(username, password) {
 
-        return this.http.post<any>(`http://localhost:3001/enthusiasts`, { username, password })
+        return this.http.post<any>(`http://localhost:8080/api/enthusiasts`, { username, password })
             .pipe(map(user => {
 
                 localStorage.setItem('currentUserEnthusiast', JSON.stringify(user));

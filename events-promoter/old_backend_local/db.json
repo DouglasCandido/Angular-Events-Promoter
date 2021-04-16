@@ -123,7 +123,7 @@
       "state": "RN",
       "city": "Caicó",
       "district": "Acampamento",
-      "street": "João Vitoriano",
+      "street": "Rua João Vitoriano",
       "number_place": 157,
       "zipCode": "59300-000"
     },
@@ -139,7 +139,7 @@
       "state": "RN",
       "city": "Ouro Branco",
       "district": "Castelo dos Montes",
-      "street": "Gleide Correia",
+      "street": "Rua Gleide Correia",
       "number_place": "207",
       "zipCode": "59347-000",
       "id": 2
@@ -159,7 +159,7 @@
       "state": "RN",
       "city": "Caicó",
       "district": "Paraíba",
-      "street": "Francisco Batista",
+      "street": "Rua Francisco Batista",
       "number_place": 391,
       "zipCode": "59300-000",
       "site": "www.dccomics.com"
@@ -176,7 +176,7 @@
       "state": "RN",
       "city": "Jardim de Piranhas",
       "district": "Centro",
-      "street": "15 de Novembro",
+      "street": "Rua 15 de Novembro",
       "number_place": 4,
       "zipCode": "59324-000",
       "site": "shop.dccomics.com",
@@ -189,4 +189,5 @@
     }
   ]
 }
+
 

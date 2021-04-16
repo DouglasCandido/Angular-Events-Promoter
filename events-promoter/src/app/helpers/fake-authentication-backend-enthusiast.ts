@@ -8,7 +8,7 @@ let users
 
 const fetchData = async () => {
     const result = await axios.get(
-        "http://localhost:3001/enthusiasts",
+        "http://localhost:8080/api/enthusiasts",
     );
 
     return result;
@@ -37,7 +37,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
             switch (true) {
 
-                case url.endsWith('/enthusiasts') && method === 'POST':
+                case url.endsWith('/enthusiasts/authenticate') && method === 'POST':
                     return authenticate();
                 default:
                     return next.handle(request);
@@ -55,7 +55,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             if (!user) return error('Username or password is incorrect');
 
             return ok({
-                id: user.id,
+                // id: user.id,
                 name_enthusiast: user.name_enthusiast,
                 token: 'fake-jwt-token'
             })

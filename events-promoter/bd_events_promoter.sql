@@ -1,10 +1,10 @@
-drop schema bd_events_promoter;
+# drop schema bd_events_promoter;
 
-create schema bd_events_promoter;
+# create schema bd_events_promoter;
 
 use bd_events_promoter; 
 
-ALTER DATABASE bd_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# ALTER DATABASE bd_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # O Script de criação comentado abaixo está obsoleto
 /*

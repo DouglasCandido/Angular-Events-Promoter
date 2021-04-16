@@ -15,7 +15,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
     name_enthusiast: "",
     cpf: "",
     sex: "",
-    birthDate: "",
+    birthDate: null,
     username: "",
     password_enthusiast: "",
     contactEmail: "",
@@ -29,6 +29,26 @@ export class RegistrationEnthusiastComponent implements OnInit {
 
   }
 
+  /*
+    name_enthusiast: DataTypes.STRING,
+    cpf: {
+      type: DataTypes.STRING,
+      primaryKey: true
+    },
+    sex: DataTypes.STRING,
+    birthDate: DataTypes.DATEONLY,
+    username: DataTypes.STRING,
+    password_enthusiast: DataTypes.STRING,
+    contactEmail: DataTypes.STRING,
+    contactPhone: DataTypes.STRING,
+    state: DataTypes.STRING,
+    city: DataTypes.STRING,
+    district: DataTypes.STRING,
+    street: DataTypes.STRING,
+    number_place: DataTypes.INTEGER,
+    zipCode: DataTypes.STRING
+  */
+
   constructor(private enthusiastService: EnthusiastService, private router: Router) { }
 
   ngOnInit(): void {
@@ -37,8 +57,8 @@ export class RegistrationEnthusiastComponent implements OnInit {
   createEnthusiast(): void {
 
     this.enthusiastService.create(this.enthusiast).subscribe(() => {
-    this.enthusiastService.showMessage("Você foi cadastrado com sucesso!");
-    this.router.navigate(["/login/enthusiast"]);
+      this.enthusiastService.showMessage("Você foi cadastrado com sucesso!");
+      this.router.navigate(["/login/enthusiast"]);
     });
 
   }
@@ -50,6 +70,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
   }
 
 }
+
 
 
 

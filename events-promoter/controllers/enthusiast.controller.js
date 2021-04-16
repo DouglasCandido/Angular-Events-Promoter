@@ -7,12 +7,14 @@ const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
 
     // Validate request
+    /*
     if (!req.body) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
       return;
     }
+    */
   
     const enthusiast = {
       name_enthusiast: req.body.name_enthusiast,
@@ -101,7 +103,7 @@ exports.update = (req, res) => {
       });
 };
 
-exports.delete = (req, res) => {
+exports.deleteOne = (req, res) => {
 
     const cpf = req.params.cpf;
   

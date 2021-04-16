@@ -12,7 +12,7 @@ module.exports = app => {
   
     router.put("/:cpf", enthusiasts.update);
   
-    router.delete("/:cpf", enthusiasts.delete);
+    router.delete("/:cpf", enthusiasts.deleteOne);
   
     router.delete("/", enthusiasts.deleteAll);
   

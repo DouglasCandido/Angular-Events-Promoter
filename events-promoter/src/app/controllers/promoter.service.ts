@@ -10,7 +10,7 @@ import { EMPTY, Observable } from 'rxjs';
 })
 export class PromoterService {
 
-  baseUrl = "http://localhost:3001/promoters";
+  baseUrl = "http://localhost:8080/api/promoters";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

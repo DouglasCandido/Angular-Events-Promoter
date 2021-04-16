@@ -10,7 +10,7 @@ import { EMPTY, Observable } from 'rxjs';
 })
 export class EnthusiastService {
 
-  baseUrl = "http://localhost:3001/enthusiasts";
+  baseUrl = "http://localhost:8080/api/enthusiasts";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -35,7 +35,7 @@ export class EnthusiastService {
 
   }
 
-  read(): Observable<Enthusiast[]> {
+  findAll(): Observable<Enthusiast[]> {
 
     return this.http.get<Enthusiast[]>(this.baseUrl).pipe(
       map(object => object),
@@ -44,7 +44,7 @@ export class EnthusiastService {
 
   }
 
-  readByCPF(cpf: string): Observable<Enthusiast> {
+  findOne(cpf: string): Observable<Enthusiast> {
 
     const url = `${this.baseUrl}/${cpf}`;
 
@@ -66,7 +66,7 @@ export class EnthusiastService {
 
   }
 
-  delete(cpf: string): Observable<Enthusiast> {
+  deleteOne(cpf: string): Observable<Enthusiast> {
 
     const url = `${this.baseUrl}/${cpf}`;
 
@@ -88,6 +88,8 @@ export class EnthusiastService {
   }
 
 }
+
+
 
 
 

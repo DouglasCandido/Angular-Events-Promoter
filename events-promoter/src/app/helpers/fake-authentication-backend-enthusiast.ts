@@ -8,7 +8,7 @@ let users
 
 const fetchData = async () => {
     const result = await axios.get(
-        "http://localhost:8080/api/enthusiasts",
+        "http://localhost:8080/api/enthusiasts/authenticate",
     );
 
     return result;

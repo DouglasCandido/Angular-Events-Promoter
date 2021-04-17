@@ -7,14 +7,12 @@ const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
 
     // Validate request
-    /*
     if (!req.body) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
       return;
     }
-    */
   
     const enthusiast = {
       name_enthusiast: req.body.name_enthusiast,
@@ -43,15 +41,12 @@ exports.create = (req, res) => {
             err.message || "Some error occurred while creating the Enthusiast."
         });
       });
+
 };
 
 exports.findAll = (req, res) => {
-
-    const name_enthusiast = req.query.name_enthusiast;
-
-    var condition = name_enthusiast ? { name_enthusiast: { [Op.like]: `%${name_enthusiast}%` } } : null;
   
-    Enthusiast.findAll({ where: condition })
+    Enthusiast.findAll()
       .then(data => {
         res.send(data);
       })
@@ -61,6 +56,22 @@ exports.findAll = (req, res) => {
             err.message || "Some error occurred while retrieving Enthusiasts."
         });
       });
+
+};
+
+exports.findAllToAuthenticate = (req, res) => {
+  
+  Enthusiast.findAll()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Enthusiasts."
+      });
+    });
+
 };
 
 exports.findOne = (req, res) => {
@@ -76,6 +87,7 @@ exports.findOne = (req, res) => {
           message: "Error retrieving Enthusiast with cpf=" + cpf
         });
       });
+
 };
 
 exports.update = (req, res) => {
@@ -101,6 +113,7 @@ exports.update = (req, res) => {
           message: "Error updating Enthusiast with id=" + id
         });
       });
+
 };
 
 exports.deleteOne = (req, res) => {
@@ -126,6 +139,7 @@ exports.deleteOne = (req, res) => {
           message: "Could not delete Enthusiast with cpf=" + cpf
         });
       });
+
 };
 
 exports.deleteAll = (req, res) => {
@@ -142,5 +156,7 @@ exports.deleteAll = (req, res) => {
             err.message || "Some error occurred while removing all Enthusiasts."
         });
       });
+      
 };
+
 

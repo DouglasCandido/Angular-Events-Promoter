@@ -15,7 +15,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
     name_enthusiast: "",
     cpf: "",
     sex: "",
-    birthDate: null,
+    birthDate: "",
     username: "",
     password_enthusiast: "",
     contactEmail: "",

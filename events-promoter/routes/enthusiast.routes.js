@@ -7,6 +7,8 @@ module.exports = app => {
     router.post("/", enthusiasts.create);
   
     router.get("/", enthusiasts.findAll);
+
+    router.get("/authenticate", enthusiasts.findAllToAuthenticate);
   
     router.get("/:cpf", enthusiasts.findOne);
   
@@ -19,4 +21,5 @@ module.exports = app => {
     app.use('/api/enthusiasts', router);
 
 };
+
 

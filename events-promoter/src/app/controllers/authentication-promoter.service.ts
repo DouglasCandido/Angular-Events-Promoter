@@ -27,7 +27,7 @@ export class AuthenticationPromoterService {
 
     login(username, password) {
 
-        return this.http.post<any>(`http://localhost:8080/api/promoters`, { username, password })
+        return this.http.post<any>(`http://localhost:8080/api/promoters/authenticate`, { username, password })
             .pipe(map(user => {
 
                 localStorage.setItem('currentUserPromoter', JSON.stringify(user));

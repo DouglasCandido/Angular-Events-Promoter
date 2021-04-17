@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Events Promoter application backend." });
 });
 
-require("./routes/enthusiast.routes")(app);
+require("./routes/events_promoter.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

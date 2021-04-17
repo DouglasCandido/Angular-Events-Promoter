@@ -1,6 +1,6 @@
 const db = require("../models");
 
-const Enthusiast = db.enthusiasts;
+const Promoter = db.promoters;
 
 const Op = db.Sequelize.Op;
 
@@ -14,13 +14,13 @@ exports.create = (req, res) => {
       return;
     }
   
-    const enthusiast = {
-      name_enthusiast: req.body.name_enthusiast,
-      cpf: req.body.cpf,
+    const promoter = {
+      name_promoter: req.body.name_promoter,
+      cnpj: req.body.cnpj,
       sex: req.body.sex,
       birthDate: req.body.birthDate,
       username: req.body.username,
-      password_enthusiast: req.body.password_enthusiast,
+      password_promoter: req.body.password_promoter,
       contactEmail: req.body.contactEmail,
       contactPhone: req.body.contactPhone,
       state: req.body.state,
@@ -28,17 +28,18 @@ exports.create = (req, res) => {
       district: req.body.district,
       street: req.body.street,
       number_place: req.body.number_place,
-      zipCode: req.body.zipCode
+      zipCode: req.body.zipCode,
+      site: req.body.site,
     };
   
-    Enthusiast.create(enthusiast)
+    Promoter.create(promoter)
       .then(data => {
         res.send(data);
       })
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while creating the Enthusiast."
+            err.message || "Some error occurred while creating the Promoter."
         });
       });
 
@@ -46,14 +47,14 @@ exports.create = (req, res) => {
 
 exports.findAll = (req, res) => {
   
-    Enthusiast.findAll()
+    Promoter.findAll()
       .then(data => {
         res.send(data);
       })
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while retrieving Enthusiasts."
+            err.message || "Some error occurred while retrieving Promoters."
         });
       });
 
@@ -61,14 +62,14 @@ exports.findAll = (req, res) => {
 
 exports.findAllToAuthenticate = (req, res) => {
   
-  Enthusiast.findAll()
+  Promoter.findAll()
     .then(data => {
       res.send(data);
     })
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving Enthusiasts."
+          err.message || "Some error occurred while retrieving Promoters."
       });
     });
 
@@ -76,15 +77,15 @@ exports.findAllToAuthenticate = (req, res) => {
 
 exports.findOne = (req, res) => {
 
-    const cpf = req.params.cpf;
+    const cnpj = req.params.cnpj;
   
-    Enthusiast.findByPk(cpf)
+    Promoter.findByPk(cnpj)
       .then(data => {
         res.send(data);
       })
       .catch(err => {
         res.status(500).send({
-          message: "Error retrieving Enthusiast with cpf=" + cpf
+          message: "Error retrieving Promoter with cnpj=" + cnpj
         });
       });
 
@@ -92,25 +93,25 @@ exports.findOne = (req, res) => {
 
 exports.update = (req, res) => {
 
-    const cpf = req.params.cpf;
+    const cnpj = req.params.cnpj;
   
-    Enthusiast.update(req.body, {
-      where: { cpf: cpf }
+    Promoter.update(req.body, {
+      where: { cnpj: cnpj }
     })
       .then(num => {
         if (num == 1) {
           res.send({
-            message: "Enthusiast was updated successfully."
+            message: "Promoter was updated successfully."
           });
         } else {
           res.send({
-            message: `Cannot update Enthusiast with cpf=${cpf}. Maybe Enthusiast was not found or req.body is empty!`
+            message: `Cannot update Promoter with cnpj=${cnpj}. Maybe Promoter was not found or req.body is empty!`
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Error updating Enthusiast with cpf=" + cpf
+          message: "Error updating Promoter with cnpj=" + cnpj
         });
       });
 
@@ -118,42 +119,42 @@ exports.update = (req, res) => {
 
 exports.deleteOne = (req, res) => {
 
-    const cpf = req.params.cpf;
+    const cnpj = req.params.cnpj;
   
-    Enthusiast.destroy({
-      where: { cpf: cpf }
+    Promoter.destroy({
+      where: { cnpj: cnpj }
     })
       .then(num => {
         if (num == 1) {
           res.send({
-            message: "Enthusiast was deleted successfully!"
+            message: "Promoter was deleted successfully!"
           });
         } else {
           res.send({
-            message: `Cannot delete Enthusiast with cpf=${cpf}. Maybe Enthusiast was not found!`
+            message: `Cannot delete Promoter with cnpj=${cnpj}. Maybe Promoter was not found!`
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Could not delete Enthusiast with cpf=" + cpf
+          message: "Could not delete Promoter with cnpj=" + cnpj
         });
       });
 
 };
 
 exports.deleteAll = (req, res) => {
-    Enthusiast.destroy({
+    Promoter.destroy({
       where: {},
       truncate: false
     })
       .then(nums => {
-        res.send({ message: `${nums} Enthusiasts were deleted successfully!` });
+        res.send({ message: `${nums} Promoters were deleted successfully!` });
       })
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while removing all Enthusiasts."
+            err.message || "Some error occurred while removing all Promoters."
         });
       });
       

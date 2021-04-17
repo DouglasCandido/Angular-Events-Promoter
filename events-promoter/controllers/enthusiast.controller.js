@@ -76,17 +76,17 @@ exports.findAllToAuthenticate = (req, res) => {
 
 exports.findOne = (req, res) => {
 
-    const cpf = req.params.cpf;
-  
-    Enthusiast.findByPk(cpf)
-      .then(data => {
-        res.send(data);
-      })
-      .catch(err => {
-        res.status(500).send({
-          message: "Error retrieving Enthusiast with cpf=" + cpf
-        });
+  const cpf = req.params.cpf;
+
+  Enthusiast.findByPk(cpf)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error retrieving Enthusiast with cpf=" + cpf
       });
+    });
 
 };
 

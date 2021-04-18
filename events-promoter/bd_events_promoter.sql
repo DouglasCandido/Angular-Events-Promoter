@@ -6,6 +6,8 @@ use bd_events_promoter;
 
 # ALTER DATABASE bd_events_promoter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+# SET @@global.time_zone = '+3:00';
+
 # O Script de criação comentado abaixo está obsoleto
 /*
 # Tabela utilizada para armazenar os estados cadastrados no sistema

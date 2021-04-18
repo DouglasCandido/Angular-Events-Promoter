@@ -1,6 +1,6 @@
 .home-presentation {
     background-color: yellow;
-    margin-left: 13%;
+    margin-top: 1%;
     text-align: center;
     width: auto;
     height: auto;
@@ -16,6 +16,7 @@
   
   .home-presentation-subtitle {
     font-size: 1rem;
+    margin-left: 14%;
   }
   
 

@@ -1,12 +1,15 @@
 .sidenav {
     background-color: #3F51B5;
     width: 200px;
+    height: 100%;
     font-weight: bold;
+    position: fixed;
   }
     
 .sidenav a {
     color: black;
     font-weight: bold;
+    margin-bottom: 20px;
 }
   
 .sidenav a:hover {

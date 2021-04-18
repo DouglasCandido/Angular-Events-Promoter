@@ -3,6 +3,7 @@
     align-items: center;
     background-color: #FFF;
     color: darkblue;
+    position: relative;
 }
   
 .header a {

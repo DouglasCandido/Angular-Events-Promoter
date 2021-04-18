@@ -48,6 +48,8 @@ import { MyCurrentPromotingEventsComponent } from './views/my-current-promoting-
 import { PromoteNewEventComponent } from './views/promote-new-event/promote-new-event.component';
 import { MyPastPromotedEventsComponent } from './views/my-past-promoted-events/my-past-promoted-events.component';
 import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
+import { FooterLoggedRelativeComponent } from './components/template/footer-logged-relative/footer-logged-relative.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 registerLocaleData(localePT);
 
@@ -77,6 +79,7 @@ registerLocaleData(localePT);
     PromoteNewEventComponent,
     MyPastPromotedEventsComponent,
     EventsIAmInterestedInAtendingComponent,
+    FooterLoggedRelativeComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,7 +97,8 @@ registerLocaleData(localePT);
     HttpClientModule,
     FormsModule,
     MatRadioModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

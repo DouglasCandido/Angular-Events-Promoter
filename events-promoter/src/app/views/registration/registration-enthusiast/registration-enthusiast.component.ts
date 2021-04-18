@@ -29,26 +29,6 @@ export class RegistrationEnthusiastComponent implements OnInit {
 
   }
 
-  /*
-    name_enthusiast: DataTypes.STRING,
-    cpf: {
-      type: DataTypes.STRING,
-      primaryKey: true
-    },
-    sex: DataTypes.STRING,
-    birthDate: DataTypes.DATEONLY,
-    username: DataTypes.STRING,
-    password_enthusiast: DataTypes.STRING,
-    contactEmail: DataTypes.STRING,
-    contactPhone: DataTypes.STRING,
-    state: DataTypes.STRING,
-    city: DataTypes.STRING,
-    district: DataTypes.STRING,
-    street: DataTypes.STRING,
-    number_place: DataTypes.INTEGER,
-    zipCode: DataTypes.STRING
-  */
-
   constructor(private enthusiastService: EnthusiastService, private router: Router) { }
 
   ngOnInit(): void {
@@ -70,6 +50,7 @@ export class RegistrationEnthusiastComponent implements OnInit {
   }
 
 }
+
 
 
 

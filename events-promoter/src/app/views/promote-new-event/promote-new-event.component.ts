@@ -29,7 +29,7 @@ export class PromoteNewEventComponent implements OnInit {
     latitude: null,
     longitude: null,
     site: "",
-    eventDate: null
+    eventDate: ""
 
   }
 

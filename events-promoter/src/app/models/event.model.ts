@@ -14,7 +14,7 @@ export interface Event {
     latitude?: number,
     longitude?: number,
     site?: string,
-    eventDate?: Date
+    eventDate?: string
 
 }
 

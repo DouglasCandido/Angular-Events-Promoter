@@ -3,6 +3,8 @@ module.exports = app => {
     const enthusiasts = require("../controllers/enthusiast.controller.js");
 
     const promoters = require("../controllers/promoter.controller.js");
+
+    const events = require("../controllers/event.controller.js");
   
     var router = require("express").Router();
 
@@ -37,6 +39,20 @@ module.exports = app => {
     router.delete("/promoters/:cnpj", promoters.deleteOne);
   
     router.delete("/promoters", promoters.deleteAll);
+
+    // Events
+
+    router.post("/events", events.create);
+  
+    router.get("/events", events.findAll);
+  
+    router.get("/events/:id", events.findOne);
+  
+    router.put("/events/:id", events.update);
+  
+    router.delete("/events/:id", events.deleteOne);
+  
+    router.delete("/events", events.deleteAll);
   
     app.use('/api', router);
 

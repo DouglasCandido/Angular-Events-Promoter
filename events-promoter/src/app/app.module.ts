@@ -47,6 +47,7 @@ import { SideNavPromoterComponent } from './components/template/side-nav-promote
 import { MyCurrentPromotingEventsComponent } from './views/my-current-promoting-events/my-current-promoting-events.component';
 import { PromoteNewEventComponent } from './views/promote-new-event/promote-new-event.component';
 import { MyPastPromotedEventsComponent } from './views/my-past-promoted-events/my-past-promoted-events.component';
+import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
 
 registerLocaleData(localePT);
 
@@ -75,6 +76,7 @@ registerLocaleData(localePT);
     MyCurrentPromotingEventsComponent,
     PromoteNewEventComponent,
     MyPastPromotedEventsComponent,
+    EventsIAmInterestedInAtendingComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,13 +5,20 @@ table {
     position: relative;
     text-align: center;
     font-weight: bold;
+    background-color: #080920 
 }
 
 th {
+    font-weight: bold;
     text-transform: uppercase;
     text-indent: 0.5rem;
     text-align: center;
     text-orientation: sideways-right;
+    color: greenyellow;
+}
+
+td {
+    color: crimson;
 }
 
 #th_nome {
@@ -31,7 +38,7 @@ th {
 }
 
 .edit > i {
-    color: purple;
+    color: blue;
 }
 
 .delete > i {

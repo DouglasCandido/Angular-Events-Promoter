@@ -96,7 +96,7 @@ registerLocaleData(localePT);
     SocialLoginModule,
     ReactiveFormsModule,
     MatTableModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [
     {

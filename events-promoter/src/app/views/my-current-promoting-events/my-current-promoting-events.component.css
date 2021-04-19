@@ -9,9 +9,25 @@ table {
 
 th {
     text-transform: uppercase;
-    text-indent: 10px;
+    text-indent: 0.5rem;
     text-align: center;
     text-orientation: sideways-right;
+}
+
+#th_nome {
+    text-indent: 3rem;
+}
+
+#th_descricao {
+    text-indent: 6rem;
+}
+
+#th_tema {
+    text-indent: 1.3rem;
+}
+
+#th_site {
+    text-indent: 7rem;
 }
 
 .edit > i {

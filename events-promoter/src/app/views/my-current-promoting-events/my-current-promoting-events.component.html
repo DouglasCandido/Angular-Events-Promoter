@@ -10,17 +10,17 @@
       </ng-container>
 
       <ng-container matColumnDef="name_event">
-        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <th mat-header-cell *matHeaderCellDef id="th_nome">Nome</th>
         <td mat-cell *matCellDef="let event">{{event.name_event}}</td>
       </ng-container>
 
       <ng-container matColumnDef="description_event">
-        <th mat-header-cell *matHeaderCellDef>Descrição</th>
+        <th mat-header-cell *matHeaderCellDef id="th_descricao">Descrição</th>
         <td mat-cell *matCellDef="let event">{{event.description_event}}</td>
       </ng-container>
 
       <ng-container matColumnDef="theme">
-        <th mat-header-cell *matHeaderCellDef>Tema</th>
+        <th mat-header-cell *matHeaderCellDef id="th_tema">Tema</th>
         <td mat-cell *matCellDef="let event">{{event.theme}}</td>
       </ng-container>
 
@@ -65,18 +65,18 @@
       </ng-container>
 
       <ng-container matColumnDef="site">
-        <th mat-header-cell *matHeaderCellDef>Site</th>
+        <th mat-header-cell *matHeaderCellDef id="th_site">Site</th>
         <td mat-cell *matCellDef="let event">{{event.site}}</td>
       </ng-container>
 
       <ng-container matColumnDef="eventDate">
         <th mat-header-cell *matHeaderCellDef>Data e Hora do evento</th>
-        <td mat-cell *matCellDef="let event">{{event.eventDate}}</td>
+        <td mat-cell *matCellDef="let event">{{ event.eventDate | date:'medium' }}</td>
       </ng-container>
 
       <ng-container matColumnDef="createdAt">
         <th mat-header-cell *matHeaderCellDef>Data e Hora de submissão</th>
-        <td mat-cell *matCellDef="let event">{{event.createdAt}}</td>
+        <td mat-cell *matCellDef="let event">{{ event.createdAt | date:'short' }}</td>
       </ng-container>
 
       <!-- Action Column -->

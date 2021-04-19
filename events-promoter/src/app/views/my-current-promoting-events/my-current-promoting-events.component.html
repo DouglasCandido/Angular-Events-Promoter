@@ -1,5 +1,109 @@
 <app-header-promoter></app-header-promoter>
-<app-side-nav-promoter></app-side-nav-promoter>
-<app-footer-logged></app-footer-logged>
+
+<div class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="events">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let event">{{event.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name_event">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let event">{{event.name_event}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description_event">
+        <th mat-header-cell *matHeaderCellDef>Descrição</th>
+        <td mat-cell *matCellDef="let event">{{event.description_event}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="theme">
+        <th mat-header-cell *matHeaderCellDef>Tema</th>
+        <td mat-cell *matCellDef="let event">{{event.theme}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="state">
+        <th mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let event">{{event.state}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef>Cidade</th>
+        <td mat-cell *matCellDef="let event">{{event.city}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="district">
+        <th mat-header-cell *matHeaderCellDef>Bairro</th>
+        <td mat-cell *matCellDef="let event">{{event.district}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="street">
+        <th mat-header-cell *matHeaderCellDef>Rua</th>
+        <td mat-cell *matCellDef="let event">{{event.street}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="number_place">
+        <th mat-header-cell *matHeaderCellDef>Número</th>
+        <td mat-cell *matCellDef="let event">{{event.number_place}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="zipCode">
+        <th mat-header-cell *matHeaderCellDef>CEP</th>
+        <td mat-cell *matCellDef="let event">{{event.zipCode}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="latitude">
+        <th mat-header-cell *matHeaderCellDef>Latitude</th>
+        <td mat-cell *matCellDef="let event">{{event.latitude}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="longitude">
+        <th mat-header-cell *matHeaderCellDef>Longitude</th>
+        <td mat-cell *matCellDef="let event">{{event.longitude}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="site">
+        <th mat-header-cell *matHeaderCellDef>Site</th>
+        <td mat-cell *matCellDef="let event">{{event.site}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="eventDate">
+        <th mat-header-cell *matHeaderCellDef>Data e Hora do evento</th>
+        <td mat-cell *matCellDef="let event">{{event.eventDate}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="createdAt">
+        <th mat-header-cell *matHeaderCellDef>Data e Hora de submissão</th>
+        <td mat-cell *matCellDef="let event">{{event.createdAt}}</td>
+      </ng-container>
+
+      <!-- Action Column -->
+      <!--
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let event">
+            <a routerLink="/events/update/{{event.id}}" class="edit" title="Alterar Evento">
+              <i class="material-icons">
+                edit
+              </i>
+            </a>
+            <a routerLink="/events/delete/{{event.id}}" class="delete" title="Excluir Evento">
+              <i class="material-icons">
+                delete
+              </i>
+            </a>
+        </td>
+      </ng-container>
+      -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let event; columns: displayedColumns;"></tr>
+
+    </table>
+
+</div>  
+
 
 

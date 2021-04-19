@@ -14,7 +14,7 @@
         <form>
             <mat-form-field>
                 <input required matInput type="text" placeholder="CNPJ" [(ngModel)]="event.cnpj_promoter"
-                    name="cnpj_promoter" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2}" title="CNPJ do Promotor de Eventos">
+                    name="cnpj_promoter" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}![0-9]{4}-[0-9]{2}" title="CNPJ do Promotor de Eventos">
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="Nome do Evento" [(ngModel)]="event.name_event" name="name_event" title="Exemplo: Festa beneficente">
@@ -78,7 +78,8 @@
     </mat-card-actions>
     <!-- <mat-card-footer class="registration-footer"> 	Section anchored to the bottom of the card</mat-card-footer> -->
 </mat-card>
-<app-footer-logged-relative></app-footer-logged-relative>
+
+
 
 
 

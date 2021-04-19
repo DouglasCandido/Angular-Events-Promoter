@@ -43,6 +43,17 @@ import { EMPTY, Observable } from 'rxjs';
       );
   
     }
+
+    findAllByCNPJ(cnpj_promoter: string): Observable<Event[]> {
+
+      const url = `${this.baseUrl}/bycnpj/${cnpj_promoter}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
+
+    }
   
     findOne(id: number): Observable<Event> {
   
@@ -87,7 +98,9 @@ import { EMPTY, Observable } from 'rxjs';
   
     }
   
-  }
+}
+
+
   
 
   

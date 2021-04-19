@@ -60,6 +60,23 @@ exports.findAll = (req, res) => {
 
 };
 
+exports.findAllByCNPJ = (req, res) => {
+
+  const cnpj_promoter = req.params.cnpj_promoter;
+
+  Event.findAll({ where: { cnpj_promoter: cnpj_promoter } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+
+};
+
 exports.findAllToAuthenticate = (req, res) => {
   
     Event.findAll()

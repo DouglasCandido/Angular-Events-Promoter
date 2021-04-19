@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+    margin-top: 1%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+
+th {
+    text-transform: uppercase;
+    text-indent: 10px;
+    text-align: center;
+    text-orientation: sideways-right;
+}
+
+.edit > i {
+    color: purple;
+}
+
+.delete > i {
+    color: red;
+}
+
+
+

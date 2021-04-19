@@ -40,16 +40,15 @@ import {MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS} from '@angular/material/radio
 import { AvailableEventsComponent } from './views/available-events/available-events.component';
 import { SideNavEnthusiastComponent } from './components/template/side-nav-enthusiast/side-nav-enthusiast.component';
 import { HeaderEnthusiastComponent } from './components/template/header-enthusiast/header-enthusiast.component';
-import { FooterLoggedComponent } from './components/template/footer-logged/footer-logged.component';
 import { SocialLoginModule, SocialAuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
 import { HeaderPromoterComponent } from './components/template/header-promoter/header-promoter.component';
 import { SideNavPromoterComponent } from './components/template/side-nav-promoter/side-nav-promoter.component';
 import { MyCurrentPromotingEventsComponent } from './views/my-current-promoting-events/my-current-promoting-events.component';
 import { PromoteNewEventComponent } from './views/promote-new-event/promote-new-event.component';
-import { MyPastPromotedEventsComponent } from './views/my-past-promoted-events/my-past-promoted-events.component';
 import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
-import { FooterLoggedRelativeComponent } from './components/template/footer-logged-relative/footer-logged-relative.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(localePT);
 
@@ -72,14 +71,11 @@ registerLocaleData(localePT);
     AvailableEventsComponent,
     SideNavEnthusiastComponent,
     HeaderEnthusiastComponent,
-    FooterLoggedComponent,
     HeaderPromoterComponent,
     SideNavPromoterComponent,
     MyCurrentPromotingEventsComponent,
     PromoteNewEventComponent,
-    MyPastPromotedEventsComponent,
     EventsIAmInterestedInAtendingComponent,
-    FooterLoggedRelativeComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +94,9 @@ registerLocaleData(localePT);
     FormsModule,
     MatRadioModule,
     SocialLoginModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    NgbModule
   ],
   providers: [
     {

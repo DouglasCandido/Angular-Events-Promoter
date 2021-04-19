@@ -1,5 +1,4 @@
 import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
-import { MyPastPromotedEventsComponent } from './views/my-past-promoted-events/my-past-promoted-events.component';
 import { PromoteNewEventComponent } from './views/promote-new-event/promote-new-event.component';
 import { MyCurrentPromotingEventsComponent } from './views/my-current-promoting-events/my-current-promoting-events.component';
 import { AuthGuardPromoter } from './helpers/auth-guard-promoter.guard';
@@ -31,7 +30,6 @@ const routes: Routes = [
   { path: "home_promoter", component: HomePromoterComponent, canActivate: [AuthGuardPromoter] },
   { path: "home_promoter/my_current_promoting_events", component: MyCurrentPromotingEventsComponent, canActivate: [AuthGuardPromoter] },
   { path: "home_promoter/promote_new_event", component: PromoteNewEventComponent, canActivate: [AuthGuardPromoter] },
-  { path: "home_promoter/my_past_promoted_events", component: MyPastPromotedEventsComponent, canActivate: [AuthGuardPromoter] },
   { path: "**", redirectTo: "" }
 ];
 

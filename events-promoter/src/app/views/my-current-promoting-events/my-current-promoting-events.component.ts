@@ -3,10 +3,6 @@ import { Event } from './../../models/event.model';
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationPromoterService } from './../../controllers/authentication-promoter.service';
 import { Promoter } from './../../models/promoter.model';
-/*
-import { formatDate } from '@angular/common';
-import { DatePipe } from '@angular/common';
-*/
 
 @Component({
   selector: 'app-my-current-promoting-events',

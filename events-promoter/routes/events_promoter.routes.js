@@ -5,6 +5,8 @@ module.exports = app => {
     const promoters = require("../controllers/promoter.controller.js");
 
     const events = require("../controllers/event.controller.js");
+
+    const subscriptions = require("../controllers/subscription.controller");
   
     var router = require("express").Router();
 
@@ -56,6 +58,20 @@ module.exports = app => {
   
     router.delete("/events/delete", events.deleteAll);
   
+    // Subscriptions
+
+    router.post("/subscriptions", subscriptions.create);
+  
+    router.get("/subscriptions", subscriptions.findAll);
+  
+    router.get("/subscriptions/:id", subscriptions.findOne);
+
+    router.get("/subscriptions/bycpf/:cpf_enthusiast", subscriptions.findAllByCPF);
+  
+    router.delete("/subscriptions/delete/:id", subscriptions.deleteOne);
+  
+    router.delete("/subscriptions/delete", subscriptions.deleteAll);
+
     app.use('/api', router);
 
 };

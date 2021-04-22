@@ -50,6 +50,7 @@ import { PromoteNewEventComponent } from './views/promote-new-event/promote-new-
 import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { EventSubscribeComponent } from './components/event-subscribe/event-subscribe.component';
 
 registerLocaleData(localePT);
 
@@ -79,6 +80,7 @@ registerLocaleData(localePT);
     EventsIAmInterestedInAtendingComponent,
     EventDeleteComponent,
     EventUpdateComponent,
+    EventSubscribeComponent,
   ],
   imports: [
     BrowserModule,

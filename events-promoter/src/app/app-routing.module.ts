@@ -1,3 +1,4 @@
+import { EventSubscribeComponent } from './components/event-subscribe/event-subscribe.component';
 import { EventUpdateComponent } from './components/event-update/event-update.component';
 import { EventDeleteComponent } from './components/event-delete/event-delete.component';
 import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: "home_promoter/promote_new_event", component: PromoteNewEventComponent, canActivate: [AuthGuardPromoter] },
   { path: 'home_promoter/events/update/:id', component: EventUpdateComponent, canActivate: [AuthGuardPromoter]},
   { path: 'home_promoter/events/delete/:id', component: EventDeleteComponent, canActivate: [AuthGuardPromoter]},
+  { path: 'home_enthusiast/events/subscribe/:id', component: EventSubscribeComponent, canActivate: [AuthGuardEnthusiast] },
   { path: "**", redirectTo: "" }
 ];
 

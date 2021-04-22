@@ -77,21 +77,6 @@ exports.findAllByCNPJ = (req, res) => {
 
 };
 
-exports.findAllToAuthenticate = (req, res) => {
-  
-    Event.findAll()
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving Events."
-      });
-    });
-
-};
-
 exports.findOne = (req, res) => {
 
   const id = req.params.id;

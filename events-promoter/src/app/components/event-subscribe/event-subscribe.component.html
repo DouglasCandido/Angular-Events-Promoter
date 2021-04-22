@@ -1,75 +1,82 @@
-<app-header-promoter></app-header-promoter>
+<app-header-enthusiast></app-header-enthusiast>
 <mat-card class="registration mat-elevation-z4">
     <mat-card-title class="registration-title">
-        Cadastro de Evento
+        Inscrição em evento
         <i class="material-icons">
-            edit_calendar
+            touch_app
         </i>
     </mat-card-title>
     <mat-card-subtitle class="registration-subtitle">
-        Olá, Promotor de Eventos, para realizar o cadastro do seu novo evento, preencha o formulário abaixo: 
+        Olá, Entusiasta, para se inscrever no evento, preencha o formulário abaixo: 
     </mat-card-subtitle>
     <mat-card-content class="registration-content">
-        Seu CNPJ é: {{ currentUser.cnpj }}
+        Seu CPF é: {{ currentUser.cpf }}
         <form>
             <mat-form-field>
-                <input required matInput type="text" placeholder="CNPJ" [(ngModel)]="event.cnpj_promoter"
-                    name="cnpj_promoter" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}![0-9]{4}-[0-9]{2}" title="CNPJ do Promotor de Eventos">
+                <input required matInput type="text" placeholder="ID do Evento" [(ngModel)]="subscription.id_event" name="id_event" disabled>
             </mat-form-field>
             <mat-form-field>
-                <input required matInput type="text" placeholder="Nome do Evento" [(ngModel)]="event.name_event" name="name_event" title="Exemplo: Festa beneficente">
+                <input required matInput type="text" placeholder="CPF" [(ngModel)]="subscription.cpf_enthusiast" name="cpf"
+                    pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" title="Exemplo: xxx.xxx.xxx-xx">
             </mat-form-field>
             <mat-form-field>
-                <input required matInput type="text" placeholder="Descrição do Evento" [(ngModel)]="event.description_event" name="description_event" title="Exemplo: Essa Festa beneficente tem o objetivo de arrecadar fundos para ajudar os moradores de rua">
+                <input required matInput type="text" placeholder="CNPJ do Promotor de Eventos" [(ngModel)]="event.cnpj_promoter"
+                    name="cnpj_promoter" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}![0-9]{4}-[0-9]{2}" title="CNPJ do Promotor de Eventos" disabled>
             </mat-form-field>
             <mat-form-field>
-                <input required matInput type="text" placeholder="Tema do Evento" [(ngModel)]="event.theme" name="theme" title="Exemplo: Festa beneficente">
+                <input required matInput type="text" placeholder="Nome do Evento" [(ngModel)]="event.name_event" name="name_event" title="Exemplo: Festa beneficente" disabled>
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput type="text" placeholder="Descrição do Evento" [(ngModel)]="event.description_event" name="description_event" title="Exemplo: Essa Festa beneficente tem o objetivo de arrecadar fundos para ajudar os moradores de rua" disabled>
+            </mat-form-field>
+            <mat-form-field>
+                <input required matInput type="text" placeholder="Tema do Evento" [(ngModel)]="event.theme" name="theme" title="Exemplo: Festa beneficente" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="Estado" [(ngModel)]="event.state" name="state"
-                    pattern="[A-Z]{2}">
+                    pattern="[A-Z]{2}" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="Cidade" [(ngModel)]="event.city" name="city"
-                    pattern="[A-Za-z].{2,56}" title="3 ou até 56 caracteres">
+                    pattern="[A-Za-z].{2,56}" title="3 ou até 56 caracteres" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="Bairro" [(ngModel)]="event.district"
-                    name="district" pattern="[A-Za-z].{2,56}" title="3 ou até 56 caracteres">
+                    name="district" pattern="[A-Za-z].{2,56}" title="3 ou até 56 caracteres" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="Rua" [(ngModel)]="event.street" name="street"
-                    pattern="[A-Za-z].{2,56}" title="3 ou até 56 caracteres">
+                    pattern="[A-Za-z].{2,56}" title="3 ou até 56 caracteres" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="number" placeholder="Número da residência"
-                    [(ngModel)]="event.number_place" name="number_place" pattern="[0-9].{0,}">
+                    [(ngModel)]="event.number_place" name="number_place" pattern="[0-9].{0,}" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="CEP" [(ngModel)]="event.zipCode" name="zipCode"
-                    pattern="[0-9].{2,10}-[0-9]{3}" title="Exemplo: 59300-000">
+                    pattern="[0-9].{2,10}-[0-9]{3}" title="Exemplo: 59300-000" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="number" placeholder="Latitude"
-                    [(ngModel)]="event.latitude" name="latitude">
+                    [(ngModel)]="event.latitude" name="latitude" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="number" placeholder="Longitude"
-                    [(ngModel)]="event.longitude" name="longitude">
+                    [(ngModel)]="event.longitude" name="longitude" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="text" placeholder="Site do evento" [(ngModel)]="event.site" name="site"
-                    title="Exemplo: www.site.com">
+                    title="Exemplo: www.site.com" disabled>
             </mat-form-field>
             <mat-form-field>
                 <input required matInput type="datetime-local" placeholder="Data e hora em que o evento ocorrerá" [(ngModel)]="event.eventDate"
-                    name="eventDate">
+                    name="eventDate" disabled>
             </mat-form-field>
         </form>
     </mat-card-content>
     <!-- <img mat-card-image class="registration-image" alt="presentation" src="assets/img/..."> -->
     <mat-card-actions class="registration-actions">
-        <button mat-raised-button (click)="createEvent()" color="primary">
+        <button mat-raised-button (click)="subscribeForTheEvent()" color="primary">
             Salvar
         </button>
         <button mat-raised-button (click)="cancel()" color="warn">

@@ -1,21 +1,21 @@
-import { Promoter } from './../models/promoter.model';
+import { Subscription } from './../models/subscription.model';
 import { catchError, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PromoterService {
+export class SubscriptionService {
 
-  baseUrl = "http://localhost:8080/api/promoters";
+  baseUrl = "http://localhost:8080/api/subscriptions";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg: string, isError: boolean = false): void {
-
+  
     this.snackBar.open(msg, 'X', 
     {
       duration:  3000, 
@@ -26,51 +26,51 @@ export class PromoterService {
     
   }
 
-  create(promoter: Promoter): Observable<Promoter> {
+  subscribe(subscription: Subscription): Observable<Subscription> {
 
-    return this.http.post<Promoter>(this.baseUrl, promoter).pipe(
+    return this.http.post<Subscription>(this.baseUrl, subscription).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  findAll(): Observable<Promoter[]> {
+  findAll(): Observable<Subscription[]> {
 
-    return this.http.get<Promoter[]>(this.baseUrl).pipe(
+    return this.http.get<Subscription[]>(this.baseUrl).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  findOne(cnpj: string): Observable<Promoter> {
+  findAllByCPF(cpf_enthusiast: string): Observable<Subscription[]> {
 
-    const url = `${this.baseUrl}/${cnpj}`;
+    const url = `${this.baseUrl}/bycpf/${cpf_enthusiast}`;
 
-    return this.http.get<Promoter>(url).pipe(
+    return this.http.get<Subscription[]>(url).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  update(promoter: Promoter): Observable<Promoter> {
+  findOne(id: number): Observable<Subscription> {
 
-    const url = `${this.baseUrl}/${promoter.cnpj}`;
+    const url = `${this.baseUrl}/${id}`;
 
-    return this.http.put<Promoter>(url, promoter).pipe(
+    return this.http.get<Subscription>(url).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
 
   }
 
-  deleteOne(cnpj: string): Observable<Promoter> {
+  deleteOne(id: number): Observable<Subscription> {
 
-    const url = `${this.baseUrl}/${cnpj}`;
+    const url = `${this.baseUrl}/delete/${id}`;
 
-    return this.http.delete<Promoter>(url).pipe(
+    return this.http.delete<Subscription>(url).pipe(
       map(object => object),
       catchError(e => this.errorHandler(e))
     );
@@ -88,6 +88,4 @@ export class PromoterService {
   }
 
 }
-
-
 

@@ -33,15 +33,22 @@ export class PromoteNewEventComponent implements OnInit {
 
   }
 
+  cnpj_promoter: string;
+
   constructor(private eventService: EventService, private router: Router, private authenticationService: AuthenticationPromoterService) { 
 
     this.currentUser = this.authenticationService.currentUserValue;
 
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
 
+    this.cnpj_promoter = this.currentUser.cnpj;
+
   }
 
   ngOnInit(): void {
+
+    this.event.cnpj_promoter = this.cnpj_promoter;
+
   }
 
   createEvent(): void {
@@ -60,5 +67,6 @@ export class PromoteNewEventComponent implements OnInit {
   }
 
 }
+
 
 

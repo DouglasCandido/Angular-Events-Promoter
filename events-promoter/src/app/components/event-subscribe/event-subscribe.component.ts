@@ -21,7 +21,7 @@ export class EventSubscribeComponent implements OnInit {
   promoter: Promoter = {
     name_promoter: "",
     cnpj: ""
-  }
+  };
 
   event: Event = {
 
@@ -40,14 +40,16 @@ export class EventSubscribeComponent implements OnInit {
     site: "",
     eventDate: null
 
-  }
+  };
 
   subscription: Subscription = {
 
     id_event: null,
     cpf_enthusiast: ""
 
-  }
+  };
+
+  cpf_enthusiast: string;
 
   constructor(private subscriptionService: SubscriptionService, private eventService: EventService, private promoterService: PromoterService, private router: Router, private authenticationService: AuthenticationEnthusiastService) { 
 
@@ -55,11 +57,13 @@ export class EventSubscribeComponent implements OnInit {
 
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
 
+    this.cpf_enthusiast = this.currentUser.cpf;
+
   }
 
   ngOnInit(): void {
 
-    
+    this.subscription.cpf_enthusiast = this.cpf_enthusiast;
 
   }
 

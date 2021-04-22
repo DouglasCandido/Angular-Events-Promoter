@@ -1,0 +1,19 @@
+<app-header-promoter></app-header-promoter>
+<mat-card>
+    <mat-card-title>Excluir evento</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input required matInput type="text" placeholder="Nome do Evento" [value]="event.name_event" name="name_event" title="Exemplo: Festa beneficente" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input required matInput type="text" placeholder="Descrição do Evento" [value]="event.description_event" name="description_event" title="Exemplo: Essa Festa beneficente tem o objetivo de arrecadar fundos para ajudar os moradores de rua" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteEvent()" color="warn">
+        Excluir
+    </button>
+    <button mat-raised-button (click)="cancel()" color="accent">
+        Cancelar
+    </button>
+</mat-card>
+

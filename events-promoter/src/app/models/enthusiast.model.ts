@@ -4,7 +4,7 @@ export interface Enthusiast {
     name_enthusiast?: string;
     cpf?: string;
     sex?: string;
-    birthDate?: string; // Date
+    birthDate?: Date; 
     username?: string;
     password_enthusiast?: string;
     contactEmail?: string;
@@ -18,6 +18,7 @@ export interface Enthusiast {
     token?: string;
     
 }
+
 
 
 

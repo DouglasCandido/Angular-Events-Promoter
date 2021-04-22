@@ -15,7 +15,7 @@ export class RegistrationPromoterComponent implements OnInit {
     name_promoter: "",
     cnpj: "",
     sex: "",
-    birthDate: "",
+    birthDate: null,
     username: "",
     password_promoter: "",
     contactEmail: "",

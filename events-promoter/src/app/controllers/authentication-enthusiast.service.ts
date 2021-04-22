@@ -42,8 +42,8 @@ export class AuthenticationEnthusiastService {
     }
 
     logout() {
-
-        this.socialAuthService.signOut();
+ 
+        this.socialAuthService.signOut().catch(() => console.log("Você deslogou do sistema com sucesso."));
 
         localStorage.removeItem('currentUserEnthusiast');
         
@@ -64,6 +64,9 @@ export class AuthenticationEnthusiastService {
     }
 
 }
+
+
+
 
 
 

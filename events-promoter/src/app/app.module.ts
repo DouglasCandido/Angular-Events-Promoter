@@ -1,3 +1,5 @@
+import { EventDeleteComponent } from './components/event-delete/event-delete.component';
+import { EventUpdateComponent } from './components/event-update/event-update.component';
 import { fakeAuthenticationBackendPromoterProvider } from './helpers/fake-authentication-backend-promoter';
 import { PromoterErrorInterceptor } from './helpers/promoter-error-interceptor.interceptor';
 import { PromoterJWtInterceptor } from './helpers/promoter-jwt-interceptor.interceptor';
@@ -48,7 +50,6 @@ import { PromoteNewEventComponent } from './views/promote-new-event/promote-new-
 import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-interested-in-atending/events-i-am-interested-in-atending.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(localePT);
 
@@ -76,6 +77,8 @@ registerLocaleData(localePT);
     MyCurrentPromotingEventsComponent,
     PromoteNewEventComponent,
     EventsIAmInterestedInAtendingComponent,
+    EventDeleteComponent,
+    EventUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,7 +99,6 @@ registerLocaleData(localePT);
     SocialLoginModule,
     ReactiveFormsModule,
     MatTableModule,
-    NgbModule,
   ],
   providers: [
     {
@@ -133,6 +135,7 @@ registerLocaleData(localePT);
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 
 

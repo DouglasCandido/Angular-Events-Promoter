@@ -14,19 +14,19 @@ th {
     text-indent: 0.5rem;
     text-align: center;
     text-orientation: sideways-right;
-    color: greenyellow;
+    color: green;
 }
 
 td {
-    color: crimson;
+    color: yellow;
 }
 
 #th_nome {
-    text-indent: 3rem;
+    text-indent: 1.5rem;
 }
 
 #th_descricao {
-    text-indent: 6rem;
+    text-indent: 1.5rem;
 }
 
 #th_tema {
@@ -34,7 +34,7 @@ td {
 }
 
 #th_site {
-    text-indent: 7rem;
+    text-indent: 6.5rem;
 }
 
 .edit > i {
@@ -44,6 +44,7 @@ td {
 .delete > i {
     color: red;
 }
+
 
 
 

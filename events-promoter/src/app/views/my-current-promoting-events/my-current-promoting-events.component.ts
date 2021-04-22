@@ -19,9 +19,7 @@ export class MyCurrentPromotingEventsComponent implements OnInit {
 
   events: Event[];
 
-  // displayedColumns = ["id", "name_event", "description_event", "theme", "state", "city", "district", "street", "number_place", "zipCode", "latitude", "longitude", "site", "eventDate", "createdAt", "action"];
-
-  displayedColumns = ["id", "name_event", "description_event", "theme", "state", "city", "district", "street", "number_place", "zipCode", "latitude", "longitude", "site", "eventDate", "createdAt"];
+  displayedColumns = ["name_event", "description_event", "theme", "state", "city", "district", "street", "number_place", "zipCode", "latitude", "longitude", "site", "eventDate", "createdAt", "updatedAt", "action"];
 
   constructor(private eventService: EventService, private authenticationService: AuthenticationPromoterService) {
 

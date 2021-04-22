@@ -7,11 +7,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  text-indent: 1rem;
 }
 
 .home-presentation-title {
   font-size: 1.5rem;
   line-height: 1.5;
+  text-indent: 10rem;
 }
 
 .home-presentation-subtitle {

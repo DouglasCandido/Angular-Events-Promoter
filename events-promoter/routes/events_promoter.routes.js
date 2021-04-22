@@ -50,11 +50,11 @@ module.exports = app => {
 
     router.get("/events/bycnpj/:cnpj_promoter", events.findAllByCNPJ);
   
-    router.put("/events/:id", events.update);
+    router.put("/events/update/:id", events.update);
   
-    router.delete("/events/:id", events.deleteOne);
+    router.delete("/events/delete/:id", events.deleteOne);
   
-    router.delete("/events", events.deleteAll);
+    router.delete("/events/delete", events.deleteAll);
   
     app.use('/api', router);
 

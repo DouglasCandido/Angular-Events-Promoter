@@ -4,11 +4,6 @@
 
     <table mat-table [dataSource]="events">
 
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>Id</th>
-        <td mat-cell *matCellDef="let event">{{event.id}}</td>
-      </ng-container>
-
       <ng-container matColumnDef="name_event">
         <th mat-header-cell *matHeaderCellDef id="th_nome">Nome</th>
         <td mat-cell *matCellDef="let event">{{event.name_event}}</td>
@@ -76,27 +71,30 @@
 
       <ng-container matColumnDef="createdAt">
         <th mat-header-cell *matHeaderCellDef>Data e Hora de submissão</th>
-        <td mat-cell *matCellDef="let event">{{ event.createdAt | date:'short' }}</td>
+        <td mat-cell *matCellDef="let event">{{ event.createdAt | date:'medium' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="updatedAt">
+        <th mat-header-cell *matHeaderCellDef>Data e Hora da última atualização</th>
+        <td mat-cell *matCellDef="let event">{{ event.updatedAt | date:'medium' }}</td>
       </ng-container>
 
       <!-- Action Column -->
-      <!--
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let event">
-            <a routerLink="/events/update/{{event.id}}" class="edit" title="Alterar Evento">
+            <a routerLink="/home_promoter/events/update/{{event.id}}" class="edit" title="Alterar Evento">
               <i class="material-icons">
                 edit
               </i>
             </a>
-            <a routerLink="/events/delete/{{event.id}}" class="delete" title="Excluir Evento">
+            <a routerLink="/home_promoter/events/delete/{{event.id}}" class="delete" title="Excluir Evento">
               <i class="material-icons">
                 delete
               </i>
             </a>
         </td>
       </ng-container>
-      -->
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let event; columns: displayedColumns;"></tr>

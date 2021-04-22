@@ -57,7 +57,7 @@ export class PromoterService {
 
   update(promoter: Promoter): Observable<Promoter> {
 
-    const url = `${this.baseUrl}/${promoter.id}`;
+    const url = `${this.baseUrl}/${promoter.cnpj}`;
 
     return this.http.put<Promoter>(url, promoter).pipe(
       map(object => object),

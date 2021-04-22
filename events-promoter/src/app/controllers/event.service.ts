@@ -68,7 +68,7 @@ import { EMPTY, Observable } from 'rxjs';
   
     update(event: Event): Observable<Event> {
   
-      const url = `${this.baseUrl}/${event.id}`;
+      const url = `${this.baseUrl}/update/${event.id}`;
   
       return this.http.put<Event>(url, event).pipe(
         map(object => object),
@@ -79,7 +79,7 @@ import { EMPTY, Observable } from 'rxjs';
   
     deleteOne(id: number): Observable<Event> {
   
-      const url = `${this.baseUrl}/${id}`;
+      const url = `${this.baseUrl}/delete/${id}`;
   
       return this.http.delete<Event>(url).pipe(
         map(object => object),
@@ -99,6 +99,8 @@ import { EMPTY, Observable } from 'rxjs';
     }
   
 }
+
+
 
 
   

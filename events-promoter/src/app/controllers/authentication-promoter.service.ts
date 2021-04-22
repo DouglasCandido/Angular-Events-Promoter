@@ -46,6 +46,8 @@ export class AuthenticationPromoterService {
         
         this.currentUserSubject.next(null);
 
+        alert("Você saiu do sistema com sucesso.");
+
     }
 
 }

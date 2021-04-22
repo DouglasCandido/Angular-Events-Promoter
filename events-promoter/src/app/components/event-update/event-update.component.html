@@ -48,10 +48,11 @@
                 title="Exemplo: www.site.com">
         </mat-form-field>
         <mat-form-field>
-            <input required matInput type="datetime-local" placeholder="Data e hora em que o evento ocorrerá" [(ngModel)]="event.eventDate"
+            <input required matInput type="datetime-local" placeholder="Data e hora em que o evento ocorrerá" [(ngModel)]="data_formatada"
                 name="eventDate">
         </mat-form-field>
     </form>
+    <p> Data completa antes de ser alterada: {{data_full}} </p>
     <button mat-raised-button (click)="updateEvent()" color="primary">
         Alterar
     </button>

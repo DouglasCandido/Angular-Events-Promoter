@@ -1,11 +1,11 @@
 mat-card {
     position: relative;
-    margin-top: 1%;
+    margin-top: 3%;
     width: 100%;
     height: auto;
     text-align: center;
     font-weight: bolder;
-    bottom: 1%;
+    bottom: 3%;
     background-color: cornflowerblue;
     color: gold;
     font-size: 1.5rem;
@@ -19,6 +19,15 @@ form {
 form input {
     font-weight: bold;
     color: black;
+}
+
+p {
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: oblique;
+    position: relative;
+    bottom: 1.5rem;
 }
 
 button {

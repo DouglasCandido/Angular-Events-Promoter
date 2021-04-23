@@ -82,7 +82,13 @@ export class EventSubscribeComponent implements OnInit {
 
       this.data_formatada = new Date(formatDate(this.event.eventDate, 'medium', 'en-US', '-0600')).toISOString().slice(0,16);
 
+      this.promoterService.findOne(this.event.cnpj_promoter).subscribe(promoter => {
+
+        this.promoter = promoter;
+
       });
+
+    });
 
   }
 

@@ -2,10 +2,10 @@
     text-align: center;
     background-color: gainsboro;
     height: auto;
-    width: 50%;
+    width: 100%;
+    margin: auto;
     margin-top: 3%;
     bottom: 3%;
-    margin-left: 25%;
     position: relative;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .registration .registration-content {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: black;
     font-style: oblique;

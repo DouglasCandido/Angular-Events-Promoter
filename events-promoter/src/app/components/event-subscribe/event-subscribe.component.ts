@@ -50,6 +50,13 @@ export class EventSubscribeComponent implements OnInit {
 
   };
 
+  subscription_integrity: Subscription = {
+
+    id_event: null,
+    cpf_enthusiast: ""
+
+  }
+
   cpf_enthusiast: string;
 
   id: number;
@@ -98,17 +105,29 @@ export class EventSubscribeComponent implements OnInit {
 
     this.subscription.cpf_enthusiast = this.cpf_enthusiast;
 
-    this.subscriptionService.findOneByCPFAndIDEvent(this.subscription).subscribe((subscription) => {
+    this.subscriptionService.findOneByCPFAndIDEvent(this.subscription).subscribe((subscription_encontrada) => {
 
-      this.subscription = subscription;
+      this.subscription_integrity = subscription_encontrada;
 
-    });
+      if((this.subscription_integrity != null)) {
 
-    this.subscriptionService.subscribe(this.subscription).subscribe(() => {
+        this.subscriptionService.showMessage("Você já está inscrito nesse mesmo evento!", true);
+  
+        this.router.navigate(["/home_enthusiast/events_i_am_interested_in_atending"]);
+  
+      } 
+      
+      else {
 
-      this.subscriptionService.showMessage("Você se inscreveu no evento com sucesso!");
+        this.subscriptionService.subscribe(this.subscription).subscribe(() => {
 
-      this.router.navigate(["/home_enthusiast/events_i_am_interested_in_atending"]);
+          this.subscriptionService.showMessage("Você se inscreveu no evento com sucesso!");
+  
+          this.router.navigate(["/home_enthusiast/events_i_am_interested_in_atending"]);
+  
+        });
+
+      }
 
     });
 

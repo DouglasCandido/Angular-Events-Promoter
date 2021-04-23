@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { SubscriptionService } from './../../controllers/subscription.service';
 import { PromoterService } from './../../controllers/promoter.service';
 import { Promoter } from './../../models/promoter.model';
@@ -6,7 +7,7 @@ import { AuthenticationEnthusiastService } from './../../controllers/authenticat
 import { Enthusiast } from './../../models/enthusiast.model';
 import { EventService } from './../../controllers/event.service';
 import { Event } from './../../models/event.model';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
@@ -51,7 +52,13 @@ export class EventSubscribeComponent implements OnInit {
 
   cpf_enthusiast: string;
 
-  constructor(private subscriptionService: SubscriptionService, private eventService: EventService, private promoterService: PromoterService, private router: Router, private authenticationService: AuthenticationEnthusiastService) { 
+  id: number;
+
+  data_full: string;
+
+  data_formatada: string;
+
+  constructor(private subscriptionService: SubscriptionService, private eventService: EventService, private promoterService: PromoterService, private router: Router, private authenticationService: AuthenticationEnthusiastService, private route: ActivatedRoute) { 
 
     this.currentUser = this.authenticationService.currentUserValue;
 
@@ -65,14 +72,24 @@ export class EventSubscribeComponent implements OnInit {
 
     this.subscription.cpf_enthusiast = this.cpf_enthusiast;
 
+    this.id = +this.route.snapshot.paramMap.get("id");
+
+    this.eventService.findOne(this.id).subscribe(event => {
+
+      this.event = event
+
+      this.data_full = formatDate(this.event.eventDate, 'full', 'pt-BR', '-0300');
+
+      this.data_formatada = new Date(formatDate(this.event.eventDate, 'medium', 'en-US', '-0600')).toISOString().slice(0,16);
+
+      });
+
   }
 
   subscribeForTheEvent(): void {
 
     this.subscription.cpf_enthusiast = this.cpf_enthusiast;
 
-    console.log(this.subscription.cpf_enthusiast);
-    
     /*
     this.subscriptionService.subscribe(this.subscription).subscribe(() => {
       this.eventService.showMessage("Você se inscreveu no evento com sucesso!");

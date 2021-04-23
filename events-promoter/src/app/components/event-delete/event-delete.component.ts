@@ -37,9 +37,9 @@ export class EventDeleteComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const id = +this.route.snapshot.paramMap.get("id");
+      const id = +this.route.snapshot.paramMap.get("id");
 
-    this.eventService.findOne(id).subscribe(event => {
+      this.eventService.findOne(id).subscribe(event => {
 
       this.event = event;
 

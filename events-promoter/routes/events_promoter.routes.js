@@ -63,6 +63,8 @@ module.exports = app => {
     router.post("/subscriptions", subscriptions.create);
   
     router.get("/subscriptions", subscriptions.findAll);
+
+    router.post("/subscriptions/integrity", subscriptions.findOneByCPFAndIDEvent);
   
     router.get("/subscriptions/:id", subscriptions.findOne);
 

@@ -82,6 +82,36 @@ exports.findOne = (req, res) => {
 
 };
 
+exports.findOneByCPFAndIDEvent = (req, res) => {
+
+  // Validate request
+  if (!req.body) {
+    res.status(400).send({
+      message: "Content can not be empty!"
+    });
+    return;
+  }
+
+  const subscription = {
+
+    id_event: req.body.id_event,
+    cpf_enthusiast: req.body.cpf_enthusiast
+
+  };
+
+  Subscription.findOne({ where: { id_event: subscription.id_event, cpf_enthusiast: subscription.cpf_enthusiast } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Subscription."
+      });
+    });
+
+};
+
 exports.deleteOne = (req, res) => {
 
     const id = req.params.id;

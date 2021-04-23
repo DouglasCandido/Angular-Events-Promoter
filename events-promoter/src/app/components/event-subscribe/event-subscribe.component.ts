@@ -98,9 +98,18 @@ export class EventSubscribeComponent implements OnInit {
 
     this.subscription.cpf_enthusiast = this.cpf_enthusiast;
 
+    this.subscriptionService.findOneByCPFAndIDEvent(this.subscription).subscribe((subscription) => {
+
+      this.subscription = subscription;
+
+    });
+
     this.subscriptionService.subscribe(this.subscription).subscribe(() => {
+
       this.subscriptionService.showMessage("Você se inscreveu no evento com sucesso!");
+
       this.router.navigate(["/home_enthusiast/events_i_am_interested_in_atending"]);
+
     });
 
   }

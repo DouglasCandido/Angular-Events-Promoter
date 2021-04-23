@@ -66,6 +66,17 @@ export class SubscriptionService {
 
   }
 
+  findOneByCPFAndIDEvent(subscription: Subscription): Observable<Subscription> {
+
+    const url = `${this.baseUrl}/integrity/`;
+
+    return this.http.post<Subscription>(url, subscription).pipe(
+      map(object => object),
+      catchError(e => this.errorHandler(e))
+    );
+
+  }
+
   deleteOne(id: number): Observable<Subscription> {
 
     const url = `${this.baseUrl}/delete/${id}`;

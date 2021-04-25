@@ -54,6 +54,12 @@ import { EMPTY, Observable } from 'rxjs';
       );
 
     }
+
+    findAllByName(name_event: string): Observable<Event[]> {
+
+      
+
+    }
   
     findOne(id: number): Observable<Event> {
   

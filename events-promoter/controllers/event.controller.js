@@ -93,7 +93,7 @@ exports.findOne = (req, res) => {
 
 };
 
-exports.findAllByNameEvent = (req, res) => {
+exports.findAllByName = (req, res) => {
 
   const name_event = req.body.name_event;
 
@@ -111,7 +111,7 @@ exports.findAllByNameEvent = (req, res) => {
     });
 };
 
-exports.findAllByThemeEvent = (req, res) => {
+exports.findAllByTheme = (req, res) => {
 
   const theme = req.body.theme;
 
@@ -129,7 +129,7 @@ exports.findAllByThemeEvent = (req, res) => {
     });
 };
 
-exports.findAllByStateEvent = (req, res) => {
+exports.findAllByState = (req, res) => {
 
   const state = req.body.state;
 
@@ -147,7 +147,7 @@ exports.findAllByStateEvent = (req, res) => {
     });
 };
 
-exports.findAllByCityEvent = (req, res) => {
+exports.findAllByCity = (req, res) => {
 
   const city = req.body.city;
 
@@ -165,7 +165,7 @@ exports.findAllByCityEvent = (req, res) => {
     });
 };
 
-exports.findAllByZipCodeEvent = (req, res) => {
+exports.findAllByZipCode = (req, res) => {
 
   const zipCode = req.body.zipCode;
 
@@ -183,7 +183,7 @@ exports.findAllByZipCodeEvent = (req, res) => {
     });
 };
 
-// findAllByDateEvent
+// findAllByDate
 
 exports.update = (req, res) => {
 

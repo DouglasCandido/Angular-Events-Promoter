@@ -52,15 +52,15 @@ module.exports = app => {
 
     router.get("/events/bycnpj/:cnpj_promoter", events.findAllByCNPJ);
 
-    router.post("/events/byname/", events.findAllByNameEvent);
+    router.post("/events/byname/", events.findAllByName);
 
-    router.post("/events/bytheme/", events.findAllByThemeEvent);
+    router.post("/events/bytheme/", events.findAllByTheme);
 
-    router.post("/events/bystate/", events.findAllByStateEvent);
+    router.post("/events/bystate/", events.findAllByState);
 
-    router.post("/events/bycity/", events.findAllByCityEvent);
+    router.post("/events/bycity/", events.findAllByCity);
 
-    router.post("/events/byzipcode/", events.findAllByZipCodeEvent);
+    router.post("/events/byzipcode/", events.findAllByZipCode);
   
     router.put("/events/update/:id", events.update);
   

@@ -95,7 +95,7 @@ exports.findOne = (req, res) => {
 
 exports.findAllByName = (req, res) => {
 
-  const name_event = req.body.name_event;
+  const name_event = req.query.name_event;
 
   var condition = name_event ? { name_event: { [Op.like]: `%${name_event}%` } } : null;
 
@@ -113,7 +113,7 @@ exports.findAllByName = (req, res) => {
 
 exports.findAllByTheme = (req, res) => {
 
-  const theme = req.body.theme;
+  const theme = req.query.theme;
 
   var condition = theme ? { theme: { [Op.like]: `%${theme}%` } } : null;
 
@@ -131,7 +131,7 @@ exports.findAllByTheme = (req, res) => {
 
 exports.findAllByState = (req, res) => {
 
-  const state = req.body.state;
+  const state = req.query.state;
 
   var condition = state ? { state: { [Op.like]: `%${state}%` } } : null;
 
@@ -149,7 +149,7 @@ exports.findAllByState = (req, res) => {
 
 exports.findAllByCity = (req, res) => {
 
-  const city = req.body.city;
+  const city = req.query.city;
 
   var condition = city ? { city: { [Op.like]: `%${city}%` } } : null;
 
@@ -167,7 +167,7 @@ exports.findAllByCity = (req, res) => {
 
 exports.findAllByZipCode = (req, res) => {
 
-  const zipCode = req.body.zipCode;
+  const zipCode = req.query.zipCode;
 
   var condition = zipCode ? { zipCode: { [Op.like]: `%${zipCode}%` } } : null;
 

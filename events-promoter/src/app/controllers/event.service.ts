@@ -57,7 +57,56 @@ import { EMPTY, Observable } from 'rxjs';
 
     findAllByName(name_event: string): Observable<Event[]> {
 
-      
+      const url = `http://localhost:8080/api/eventos/byname?name_event=${name_event}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
+
+    }
+
+    findAllByTheme(theme: string): Observable<Event[]> {
+
+      const url = `http://localhost:8080/api/eventos/bytheme?theme=${theme}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
+
+    }
+
+    findAllByState(state: string): Observable<Event[]> {
+
+      const url = `http://localhost:8080/api/eventos/bystate?state=${state}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
+
+    }
+
+    findAllByCity(city: string): Observable<Event[]> {
+
+      const url = `http://localhost:8080/api/eventos/bycity?city=${city}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
+
+    }
+
+    findAllByZipCode(zipCode: string): Observable<Event[]> {
+
+      const url = `http://localhost:8080/api/eventos/byzipcode?zipCode=${zipCode}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
 
     }
   

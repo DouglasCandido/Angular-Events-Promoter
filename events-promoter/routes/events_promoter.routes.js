@@ -51,6 +51,16 @@ module.exports = app => {
     router.get("/events/:id", events.findOne);
 
     router.get("/events/bycnpj/:cnpj_promoter", events.findAllByCNPJ);
+
+    router.post("/events/byname/", events.findAllByNameEvent);
+
+    router.post("/events/bytheme/", events.findAllByThemeEvent);
+
+    router.post("/events/bystate/", events.findAllByStateEvent);
+
+    router.post("/events/bycity/", events.findAllByCityEvent);
+
+    router.post("/events/byzipcode/", events.findAllByZipCodeEvent);
   
     router.put("/events/update/:id", events.update);
   

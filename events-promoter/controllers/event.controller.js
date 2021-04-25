@@ -93,6 +93,98 @@ exports.findOne = (req, res) => {
 
 };
 
+exports.findAllByNameEvent = (req, res) => {
+
+  const name_event = req.body.name_event;
+
+  var condition = name_event ? { name_event: { [Op.like]: `%${name_event}%` } } : null;
+
+  Event.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+};
+
+exports.findAllByThemeEvent = (req, res) => {
+
+  const theme = req.body.theme;
+
+  var condition = theme ? { theme: { [Op.like]: `%${theme}%` } } : null;
+
+  Event.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+};
+
+exports.findAllByStateEvent = (req, res) => {
+
+  const state = req.body.state;
+
+  var condition = state ? { state: { [Op.like]: `%${state}%` } } : null;
+
+  Event.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+};
+
+exports.findAllByCityEvent = (req, res) => {
+
+  const city = req.body.city;
+
+  var condition = city ? { city: { [Op.like]: `%${city}%` } } : null;
+
+  Event.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+};
+
+exports.findAllByZipCodeEvent = (req, res) => {
+
+  const zipCode = req.body.zipCode;
+
+  var condition = zipCode ? { zipCode: { [Op.like]: `%${zipCode}%` } } : null;
+
+  Event.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+};
+
+// findAllByDateEvent
+
 exports.update = (req, res) => {
 
     const id = req.params.id;

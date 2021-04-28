@@ -1,0 +1,37 @@
+mat-card {
+    position: relative;
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-weight: bolder;
+    bottom: 3%;
+    background-color: cornflowerblue;
+    color: gold;
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+}
+
+form input {
+    font-weight: bold;
+    color: black;
+}
+
+p {
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: oblique;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+button {
+    margin: 20px 10px 0px 0px;
+}
+
+

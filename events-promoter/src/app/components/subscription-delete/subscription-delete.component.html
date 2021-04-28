@@ -1,1 +1,23 @@
-<p>subscription-delete works!</p>
+<app-header-enthusiast></app-header-enthusiast>
+<mat-card>
+    <mat-card-title>Cancelar inscrição em evento</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input required matInput type="text" placeholder="ID do evento" name="id_event" [(ngModel)]="subscription.id_event" disabled> 
+        </mat-form-field>
+        <mat-form-field>
+            <input required matInput type="datetime-local" placeholder="Data e hora da inscrição" [(ngModel)]="data_formatada"
+                name="createdAt" disabled>
+        </mat-form-field>
+    <p> Data completa: {{data_full}} </p>
+    </form>
+    <button mat-raised-button (click)="deleteSubscription()" color="warn">
+        Excluir
+    </button>
+    <button mat-raised-button (click)="cancel()" color="accent">
+        Cancelar
+    </button>
+</mat-card>
+
+
+

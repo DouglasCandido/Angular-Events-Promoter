@@ -28,12 +28,15 @@ export class MyCurrentPromotingEventsComponent implements OnInit {
   ngOnInit(): void{
 
     this.eventService.findAllByCNPJ(this.currentUser.cnpj).subscribe(
+
       events => {this.events = events}
+
     );
 
   }
 
 }
+
 
 
 

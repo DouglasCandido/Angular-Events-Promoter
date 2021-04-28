@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+    margin-top: 1%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    background-color: #080920 
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-orientation: sideways-right;
+    color: green;
+    text-indent: 40%;
+}
+
+td {
+    color: yellow;
+}
+
+.details > i {
+    color: blue;
+}
+
+.delete > i {
+    color: red;
+}
+
+
+
+
+

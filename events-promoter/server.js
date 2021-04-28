@@ -8,7 +8,7 @@ const app = express();
 
 var corsOptions = {
 
-  origin: "https://localhost:4200"
+  origin: ["https://localhost:4200", "https://alien-gantry-304802.web.app"]
   
 };
 

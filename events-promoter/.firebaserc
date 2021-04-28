@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "alien-gantry-304802": {
+      "hosting": {
+        "events-promoter": [
+          "alien-gantry-304802"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "alien-gantry-304802"
+  }
+}

@@ -1,3 +1,5 @@
+import { SubscriptionDetailsComponent } from './components/subscription-details/subscription-details.component';
+import { SubscriptionDeleteComponent } from './components/subscription-delete/subscription-delete.component';
 import { EventSubscribeComponent } from './components/event-subscribe/event-subscribe.component';
 import { EventUpdateComponent } from './components/event-update/event-update.component';
 import { EventDeleteComponent } from './components/event-delete/event-delete.component';
@@ -36,6 +38,8 @@ const routes: Routes = [
   { path: 'home_promoter/events/update/:id', component: EventUpdateComponent, canActivate: [AuthGuardPromoter]},
   { path: 'home_promoter/events/delete/:id', component: EventDeleteComponent, canActivate: [AuthGuardPromoter]},
   { path: 'home_enthusiast/events/subscribe/:id', component: EventSubscribeComponent, canActivate: [AuthGuardEnthusiast] },
+  { path: 'home_enthusiast/subscriptions/delete/:id', component: SubscriptionDeleteComponent, canActivate: [AuthGuardEnthusiast] },
+  { path: 'home_enthusiast/subscriptions/details/:id_event', component: SubscriptionDetailsComponent, canActivate: [AuthGuardEnthusiast] },
   { path: "**", redirectTo: "" }
 ];
 

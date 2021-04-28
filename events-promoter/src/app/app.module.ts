@@ -51,6 +51,8 @@ import { EventsIAmInterestedInAtendingComponent } from './views/events-i-am-inte
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { EventSubscribeComponent } from './components/event-subscribe/event-subscribe.component';
+import { SubscriptionDeleteComponent } from './components/subscription-delete/subscription-delete.component';
+import { SubscriptionDetailsComponent } from './components/subscription-details/subscription-details.component';
 
 registerLocaleData(localePT);
 
@@ -81,6 +83,8 @@ registerLocaleData(localePT);
     EventDeleteComponent,
     EventUpdateComponent,
     EventSubscribeComponent,
+    SubscriptionDeleteComponent,
+    SubscriptionDetailsComponent,
   ],
   imports: [
     BrowserModule,

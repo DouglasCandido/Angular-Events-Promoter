@@ -109,6 +109,19 @@ import { EMPTY, Observable } from 'rxjs';
       );
 
     }
+
+    /* Ainda não funciona.
+    findAllByEventDate(eventDate: Date): Observable<Event[]> {
+
+      const url = `http://localhost:8080/api/eventos/bydate?eventDate=${eventDate}`;
+
+      return this.http.get<Event[]>(url).pipe(
+        map(object => object),
+        catchError(e => this.errorHandler(e))
+      );
+
+    }
+    */
   
     findOne(id: number): Observable<Event> {
   

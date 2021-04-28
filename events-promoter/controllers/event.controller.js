@@ -183,7 +183,25 @@ exports.findAllByZipCode = (req, res) => {
     });
 };
 
-// findAllByDate
+/* Ainda não funciona.
+exports.findAllByEventDate = (req, res) => {
+
+  const eventDate = req.query.eventDate;
+
+  var condition = eventDate ? { eventDate: { [Op.like]: `%${eventDate}%` } } : null;
+
+  Event.findAll({ where: condition })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Events."
+      });
+    });
+};
+*/
 
 exports.update = (req, res) => {
 

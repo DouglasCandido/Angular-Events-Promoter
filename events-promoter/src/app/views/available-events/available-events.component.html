@@ -25,7 +25,18 @@
       <input matInput type="text" placeholder="CEP" [(ngModel)]="event.zipCode" name="zipCode"
         pattern="[0-9].{2,10}-[0-9]{3}" title="Exemplo: 59300-000">
     </mat-form-field>
+
+    <!-- Ainda não funciona -->
+    <!--
+    <mat-form-field>
+      <input required matInput type="datetime-local" placeholder="Data e hora em que o evento ocorrerá" [(ngModel)]="event.eventDate"
+          name="eventDate">
+    </mat-form-field>
+    -->
+
   </form>
+
+  <div id="actions">
   <button mat-raised-button (click)="searchEventByName()" color="primary">
     Procurar evento por nome
   </button>
@@ -41,6 +52,16 @@
   <button mat-raised-button (click)="searchEventByZipCode()" color="primary">
     Procurar evento por CEP
   </button>
+  </div>
+
+  <!-- Ainda não funciona -->
+  <!--
+  <button mat-raised-button (click)="searchEventByEventDate()" color="primary">
+    Procurar evento por data
+  </button>
+  -->
+
+  <h3> Eventos encontrados </h3>
 
   <table mat-table [dataSource]="events">
 
@@ -132,4 +153,5 @@
   </table>
 
 </div>
+
 

@@ -16,7 +16,8 @@ export class AvailableEventsComponent implements OnInit {
     theme: '',
     state: '',
     city: '',
-    zipCode: ''
+    zipCode: '',
+    eventDate: null
   }
 
   displayedColumns = ["name_event", "description_event", "theme", "state", "city", "district", "street", "number_place", "zipCode", "latitude", "longitude", "site", "eventDate", "createdAt", "action"];
@@ -95,5 +96,20 @@ export class AvailableEventsComponent implements OnInit {
 
   }
 
+  /* Ainda não funciona.
+  searchEventByEventDate(): void {
+    
+    this.eventService.findAllByEventDate(this.event.eventDate).subscribe((eventos_encontrados) => {
+
+      this.eventService.showMessage("Eventos encontrados com sucesso!");
+
+      this.events = eventos_encontrados;
+
+    });
+
+  }
+  */
+
 }
+
 

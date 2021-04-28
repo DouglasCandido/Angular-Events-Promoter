@@ -61,6 +61,9 @@ module.exports = app => {
     router.get("/eventos/bycity", events.findAllByCity);
 
     router.get("/eventos/byzipcode", events.findAllByZipCode);
+
+    // Ainda não funciona
+    // router.get("/eventos/bydate", events.findAllByEventDate);
   
     router.put("/events/update/:id", events.update);
   

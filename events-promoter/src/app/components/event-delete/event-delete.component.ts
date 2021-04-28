@@ -41,13 +41,13 @@ export class EventDeleteComponent implements OnInit {
 
       this.eventService.findOne(id).subscribe(event => {
 
-      this.event = event;
+        this.event = event;
 
-      this.data_full = formatDate(this.event.eventDate, 'full', 'pt-BR', '-0300');
+        this.data_full = formatDate(this.event.eventDate, 'full', 'pt-BR', '-0300');
 
-      this.data_formatada = new Date(formatDate(this.event.eventDate, 'medium', 'en-US', '-0600')).toISOString().slice(0,16);
+        this.data_formatada = new Date(formatDate(this.event.eventDate, 'medium', 'en-US', '-0600')).toISOString().slice(0,16);
 
-      // console.log('Data e Hora em que o evento ocorrerá: ' + this.data_full);
+        // console.log('Data e Hora em que o evento ocorrerá: ' + this.data_full);
 
     });
 

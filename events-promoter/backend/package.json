@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.17.1",
+    "heroku": "^7.53.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",
